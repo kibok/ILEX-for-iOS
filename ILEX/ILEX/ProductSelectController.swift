@@ -47,8 +47,6 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
     }
-    
-    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
-    }
+
 }
 

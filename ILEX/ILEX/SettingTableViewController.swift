@@ -82,6 +82,4 @@ class SettingTableViewController: UITableViewController {
     }
     */
     
-    @IBAction func unwindToTop2(segue: UIStoryboardSegue) {
-    }
 }

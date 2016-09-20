@@ -14,13 +14,13 @@
 		21419CC11D8B805600A282D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21419CBF1D8B805600A282D8 /* LaunchScreen.storyboard */; };
 		21419CCC1D8B805600A282D8 /* ILEXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CCB1D8B805600A282D8 /* ILEXTests.swift */; };
 		21419CD71D8B805600A282D8 /* ILEXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CD61D8B805600A282D8 /* ILEXUITests.swift */; };
-		21419CEB1D8B837B00A282D8 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21419CEA1D8B837B00A282D8 /* Setting.storyboard */; };
 		21419CEF1D8B8F7E00A282D8 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CEE1D8B8F7E00A282D8 /* ProductDetailViewController.swift */; };
 		21419CF11D8B8F9500A282D8 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF01D8B8F9500A282D8 /* CartViewController.swift */; };
 		21419CF31D8B8FAF00A282D8 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF21D8B8FAF00A282D8 /* OrderConfirmationViewController.swift */; };
 		21419CF71D8BE1B700A282D8 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */; };
 		21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */; };
 		21419CFF1D8BE53600A282D8 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */; };
+		21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E80D861D90DBD600E5C7E4 /* Setting.storyboard */; };
 		C46FE2BD1D9025DF009B6EF8 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */; };
 		C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,13 +56,13 @@
 		21419CD21D8B805600A282D8 /* ILEXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ILEXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21419CD61D8B805600A282D8 /* ILEXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILEXUITests.swift; sourceTree = "<group>"; };
 		21419CD81D8B805600A282D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		21419CEA1D8B837B00A282D8 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		21419CEE1D8B8F7E00A282D8 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		21419CF01D8B8F9500A282D8 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		21419CF21D8B8FAF00A282D8 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		21E80D871D90DBD600E5C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
 		C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				21419CBA1D8B805600A282D8 /* Main.storyboard */,
-				21419CEA1D8B837B00A282D8 /* Setting.storyboard */,
+				21E80D861D90DBD600E5C7E4 /* Setting.storyboard */,
 				21419CEC1D8B83DB00A282D8 /* Main */,
 				21419CE91D8B816900A282D8 /* Setting */,
 			);
@@ -328,7 +328,7 @@
 				21419CFF1D8BE53600A282D8 /* ProductTableViewCell.xib in Resources */,
 				C46FE2BD1D9025DF009B6EF8 /* CartTableViewCell.xib in Resources */,
 				21419CBC1D8B805600A282D8 /* Main.storyboard in Resources */,
-				21419CEB1D8B837B00A282D8 /* Setting.storyboard in Resources */,
+				21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +410,14 @@
 				21419CC01D8B805600A282D8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		21E80D861D90DBD600E5C7E4 /* Setting.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21E80D871D90DBD600E5C7E4 /* Base */,
+			);
+			name = Setting.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

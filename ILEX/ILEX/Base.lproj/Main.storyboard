@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtw-Qt-9e0" id="K8f-CZ-UfH">
-                                            <frame key="frameInset" width="342" height="149.5"/>
+                                            <frame key="frameInset" width="342" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" title="タイトル" id="Kwr-OF-cin">
                         <barButtonItem key="leftBarButtonItem" title="メニュー" id="MoJ-42-a1B">
                             <connections>
-                                <segue destination="Ocf-S4-yY5" kind="presentation" modalTransitionStyle="crossDissolve" id="Z0a-8g-xZ1"/>
+                                <segue destination="Ocf-S4-yY5" kind="presentation" modalTransitionStyle="coverVertical" id="Z0a-8g-xZ1"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="カゴ" id="WEp-zI-lAF">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6G-Dn-Djx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="-998"/>
+            <point key="canvasLocation" x="818" y="-953"/>
         </scene>
         <!--カート-->
         <scene sceneID="qb3-1g-jVb">
@@ -227,7 +227,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PuX-gO-N9v" id="2lA-yl-fcd">
-                                            <frame key="frameInset" width="375" height="129.5"/>
+                                            <frame key="frameInset" width="375" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

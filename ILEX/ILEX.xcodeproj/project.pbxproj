@@ -92,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2111D7CA1D90DDB900085AB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		21419CAA1D8B805600A282D8 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +215,7 @@
 		21419CED1D8B8EE900A282D8 /* ViewParts */ = {
 			isa = PBXGroup;
 			children = (
+				2111D7CA1D90DDB900085AB9 /* Common */,
 				21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */,
 				C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */,
 				21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */,

@@ -18,7 +18,7 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         self.productTalbeView.dataSource = self
         
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
-        self.productTalbeView.registerNib(nib, forCellReuseIdentifier: "ProductTableViewCell")
+        self.productTalbeView.register(nib, forCellReuseIdentifier: "ProductTableViewCell")
         self.productTalbeView.tableHeaderView = nil
     }
     
@@ -29,24 +29,29 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     
     // MARK: - Table view data source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 10
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ProductTableViewCell", forIndexPath: indexPath) as! ProductTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toProductDetailViewController", sender: nil)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toProductDetailViewController") {
+            let vc = (segue.destination as? ProductDetailViewController)!
+        }
+    }
 }
 

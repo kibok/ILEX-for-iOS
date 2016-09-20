@@ -14,7 +14,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a82-j1-wFc">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item1" translatesAutoresizingMaskIntoConstraints="NO" id="pP0-hz-Ltz">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Noimage_image" translatesAutoresizingMaskIntoConstraints="NO" id="pP0-hz-Ltz">
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="7qZ-Th-ltb"/>
                                 <constraint firstAttribute="height" constant="100" id="cN7-dc-z17"/>
@@ -75,6 +75,6 @@
         </view>
     </objects>
     <resources>
-        <image name="item1" width="262" height="298"/>
+        <image name="Noimage_image" width="250" height="200"/>
     </resources>
 </document>

@@ -10,12 +10,17 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
 
+    @IBOutlet weak var plusMinusButton: PlusMinusButton!
+    var count = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.plusMinusButton.plus.addTarget(self, action: #selector(ProductDetailViewController.touchUpInsidePlus(sender:)), for: .touchUpInside)
+        self.plusMinusButton.minus.addTarget(self, action: #selector(ProductDetailViewController.touchUpInsideMinus(sender:)), for: .touchUpInside)
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,5 +36,15 @@ class ProductDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    func touchUpInsidePlus(sender: AnyObject) {
+        self.count += 1
+        print(self.count)
+    }
+    
+    func touchUpInsideMinus(sender: AnyObject) {
+        self.count -= 1
+        print(self.count)
+    }
 
 }

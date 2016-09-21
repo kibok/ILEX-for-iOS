@@ -25,7 +25,7 @@
 		21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B835A91D91100600355207 /* PlusMinusButton.swift */; };
 		21B835AC1D91101C00355207 /* PlusMinusButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B835AB1D91101C00355207 /* PlusMinusButton.xib */; };
 		21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E80D861D90DBD600E5C7E4 /* Setting.storyboard */; };
-		3508ADA16CE477D551F4C7D6 /* Pods_ILEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2181836125B1A80C2AC6620D /* Pods_ILEX.framework */; };
+		8FD4EA76357BDA94D7494233 /* Pods_ILEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E5F75EB85D5102EDDC4CA5 /* Pods_ILEX.framework */; };
 		C46FE2BD1D9025DF009B6EF8 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */; };
 		C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,7 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CE61A28AA533D824439266C /* Pods-ILEX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.release.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.release.xcconfig"; sourceTree = "<group>"; };
+		045FA73D9BE815E5D3E2533A /* Pods-ILEX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.debug.xcconfig"; sourceTree = "<group>"; };
+		0750B78AA45BDA261FCEE5EE /* Pods_ILEXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E5F75EB85D5102EDDC4CA5 /* Pods_ILEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		212E1A8C1D911EEB00D98AAB /* XibLoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadView.swift; sourceTree = "<group>"; };
 		21419CB31D8B805600A282D8 /* ILEX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILEX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21419CB61D8B805600A282D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,11 +72,11 @@
 		21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		216F90B81D90FE4E00874943 /* ProductListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
-		2181836125B1A80C2AC6620D /* Pods_ILEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B835A91D91100600355207 /* PlusMinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		21B835AB1D91101C00355207 /* PlusMinusButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusMinusButton.xib; sourceTree = "<group>"; };
 		21E80D871D90DBD600E5C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
-		8D0B547E5EC0249735F5A19F /* Pods-ILEX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.debug.xcconfig"; sourceTree = "<group>"; };
+		8DD9623271A956A0BCAD57C8 /* Pods_ILEXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1F1CA9828331CE4DB1F7DE /* Pods-ILEX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.release.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.release.xcconfig"; sourceTree = "<group>"; };
 		C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3508ADA16CE477D551F4C7D6 /* Pods_ILEX.framework in Frameworks */,
+				8FD4EA76357BDA94D7494233 /* Pods_ILEX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +122,8 @@
 				21419CCA1D8B805600A282D8 /* ILEXTests */,
 				21419CD51D8B805600A282D8 /* ILEXUITests */,
 				21419CB41D8B805600A282D8 /* Products */,
-				6DA75E4D064A476848BAEB97 /* Pods */,
-				26CD484B15C1C1C1F6148D24 /* Frameworks */,
+				D47DC585EE06CFB99482CC55 /* Pods */,
+				980C24C0587EEC079EA6982D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,19 +245,21 @@
 			name = ViewParts;
 			sourceTree = "<group>";
 		};
-		26CD484B15C1C1C1F6148D24 /* Frameworks */ = {
+		980C24C0587EEC079EA6982D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2181836125B1A80C2AC6620D /* Pods_ILEX.framework */,
+				09E5F75EB85D5102EDDC4CA5 /* Pods_ILEX.framework */,
+				0750B78AA45BDA261FCEE5EE /* Pods_ILEXTests.framework */,
+				8DD9623271A956A0BCAD57C8 /* Pods_ILEXUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6DA75E4D064A476848BAEB97 /* Pods */ = {
+		D47DC585EE06CFB99482CC55 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D0B547E5EC0249735F5A19F /* Pods-ILEX.debug.xcconfig */,
-				1CE61A28AA533D824439266C /* Pods-ILEX.release.xcconfig */,
+				045FA73D9BE815E5D3E2533A /* Pods-ILEX.debug.xcconfig */,
+				8F1F1CA9828331CE4DB1F7DE /* Pods-ILEX.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -267,12 +271,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21419CDB1D8B805600A282D8 /* Build configuration list for PBXNativeTarget "ILEX" */;
 			buildPhases = (
-				A856A3BA65BA33B93FDDA4E6 /* [CP] Check Pods Manifest.lock */,
+				4B19069048C57F574D0426A2 /* [CP] Check Pods Manifest.lock */,
 				21419CAF1D8B805600A282D8 /* Sources */,
 				21419CB01D8B805600A282D8 /* Frameworks */,
 				21419CB11D8B805600A282D8 /* Resources */,
-				0FB10496F8A57503B4EC4921 /* [CP] Embed Pods Frameworks */,
-				F27D5964BFF364866CF1E8F9 /* [CP] Copy Pods Resources */,
+				27B9DD9A7F7FB485B15625D9 /* [CP] Embed Pods Frameworks */,
+				C41E79827C455002A278FAAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,9 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21419CDE1D8B805600A282D8 /* Build configuration list for PBXNativeTarget "ILEXTests" */;
 			buildPhases = (
+				C25827E40E8E00590E6904F7 /* [CP] Check Pods Manifest.lock */,
 				21419CC31D8B805600A282D8 /* Sources */,
 				21419CC41D8B805600A282D8 /* Frameworks */,
 				21419CC51D8B805600A282D8 /* Resources */,
+				3C091B6DEB11C6EBB07F4ABF /* [CP] Embed Pods Frameworks */,
+				FBE90305E3E58D2384EE68AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,9 +312,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21419CE11D8B805600A282D8 /* Build configuration list for PBXNativeTarget "ILEXUITests" */;
 			buildPhases = (
+				19A892C7DB328B7CE671A14B /* [CP] Check Pods Manifest.lock */,
 				21419CCE1D8B805600A282D8 /* Sources */,
 				21419CCF1D8B805600A282D8 /* Frameworks */,
 				21419CD01D8B805600A282D8 /* Resources */,
+				0138F86108FA5F3B66AF44DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,22 +406,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0FB10496F8A57503B4EC4921 /* [CP] Embed Pods Frameworks */ = {
+		0138F86108FA5F3B66AF44DE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEX/Pods-ILEX-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEXUITests/Pods-ILEXUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A856A3BA65BA33B93FDDA4E6 /* [CP] Check Pods Manifest.lock */ = {
+		19A892C7DB328B7CE671A14B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,7 +436,67 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F27D5964BFF364866CF1E8F9 /* [CP] Copy Pods Resources */ = {
+		27B9DD9A7F7FB485B15625D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEX/Pods-ILEX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C091B6DEB11C6EBB07F4ABF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEXTests/Pods-ILEXTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B19069048C57F574D0426A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C25827E40E8E00590E6904F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C41E79827C455002A278FAAC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,6 +509,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEX/Pods-ILEX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBE90305E3E58D2384EE68AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEXTests/Pods-ILEXTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -612,8 +696,9 @@
 		};
 		21419CDC1D8B805600A282D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D0B547E5EC0249735F5A19F /* Pods-ILEX.debug.xcconfig */;
+			baseConfigurationReference = 045FA73D9BE815E5D3E2533A /* Pods-ILEX.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ILEX/Info.plist;
@@ -629,8 +714,9 @@
 		};
 		21419CDD1D8B805600A282D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CE61A28AA533D824439266C /* Pods-ILEX.release.xcconfig */;
+			baseConfigurationReference = 8F1F1CA9828331CE4DB1F7DE /* Pods-ILEX.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ILEX/Info.plist;

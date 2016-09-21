@@ -1,24 +1,12 @@
 PODS:
-  - Cartography (0.7.0)
-  - KeychainAccess (3.0.0)
-  - MBProgressHUD (1.0.0)
-  - SwiftyJSON (2.3.2)
-  - SwiftyUserDefaults (3.0.0)
+  - Alamofire (4.0.0)
 
 DEPENDENCIES:
-  - Cartography
-  - KeychainAccess
-  - MBProgressHUD
-  - SwiftyJSON
-  - SwiftyUserDefaults
+  - Alamofire (~> 4.0)
 
 SPEC CHECKSUMS:
-  Cartography: dd6044b6fe352252f68b648df5bff47841e591cc
-  KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
 
-PODFILE CHECKSUM: 665a5b4c20d17f56ada3a86e6088470b680b11cd
+PODFILE CHECKSUM: 961a9d54b52075cdb19a1c1c6efa037e75b3e4fa
 
 COCOAPODS: 1.0.1

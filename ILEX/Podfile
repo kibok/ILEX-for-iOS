@@ -4,5 +4,9 @@
 target 'ILEX' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-    pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON'
+    pod 'Cartography'
+    pod 'SwiftyUserDefaults'
+    pod 'KeychainAccess'
+    pod 'MBProgressHUD'
 end

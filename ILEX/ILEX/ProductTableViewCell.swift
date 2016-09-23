@@ -10,6 +10,10 @@ import UIKit
 
 class ProductTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var itemValue: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemDescription: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -11,6 +11,9 @@ import UIKit
 class ProductDetailViewController: UIViewController {
 
     @IBOutlet weak var plusMinusButton: PlusMinusButton!
+    
+    var viewModel: Product?
+    
     var count = 0;
     
     override func viewDidLoad() {
@@ -18,14 +21,14 @@ class ProductDetailViewController: UIViewController {
         
         self.plusMinusButton.plus.addTarget(self, action: #selector(ProductDetailViewController.touchUpInsidePlus(sender:)), for: .touchUpInside)
         self.plusMinusButton.minus.addTarget(self, action: #selector(ProductDetailViewController.touchUpInsideMinus(sender:)), for: .touchUpInside)
+        
+        print(self.viewModel)
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

@@ -30,7 +30,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明：ぶらぶらぶら" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWa-8C-bFE">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明：ぶらぶらぶら" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWa-8C-bFE">
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -46,6 +46,8 @@
                         <constraint firstAttribute="bottom" secondItem="j0m-bq-BcQ" secondAttribute="bottom" constant="15" id="Roy-Cf-FeF"/>
                         <constraint firstItem="ZWa-8C-bFE" firstAttribute="top" secondItem="csK-s7-SqB" secondAttribute="bottom" constant="15" id="UmA-mL-j0J"/>
                         <constraint firstItem="ZWa-8C-bFE" firstAttribute="leading" secondItem="j0m-bq-BcQ" secondAttribute="trailing" constant="15" id="YJ4-13-QLB"/>
+                        <constraint firstAttribute="trailing" secondItem="ZWa-8C-bFE" secondAttribute="trailing" constant="15" id="acO-0u-c9O"/>
+                        <constraint firstAttribute="trailing" secondItem="gNo-JC-SeJ" secondAttribute="trailing" constant="15" id="dMm-CS-sra"/>
                         <constraint firstItem="csK-s7-SqB" firstAttribute="leading" secondItem="j0m-bq-BcQ" secondAttribute="trailing" constant="15" id="z6v-dJ-wSc"/>
                     </constraints>
                 </view>
@@ -58,6 +60,12 @@
                 <constraint firstItem="eXa-Bx-MVv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U2x-3y-8Ym"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="itemDescription" destination="ZWa-8C-bFE" id="xcD-38-d2r"/>
+                <outlet property="itemImage" destination="j0m-bq-BcQ" id="1y1-qC-Jfc"/>
+                <outlet property="itemTitle" destination="gNo-JC-SeJ" id="y2y-RO-mR5"/>
+                <outlet property="itemValue" destination="csK-s7-SqB" id="FCx-Vk-Fcg"/>
+            </connections>
             <point key="canvasLocation" x="435" y="332"/>
         </view>
     </objects>

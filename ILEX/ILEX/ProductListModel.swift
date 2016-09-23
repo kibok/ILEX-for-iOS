@@ -8,30 +8,36 @@
 
 import Foundation
 
-struct ProductModel {
+struct Product {
     let id: String
     let title: String
     let value: Int
-    let image: NSURL
+    let image: String
     let visibleCode: Int
     let description: String
-    
-    init?(data: NSData) {
-        self.id = "id"
-        self.title = "title"
-        self.value = 3000
-        self.visibleCode = 1
-        self.description = "description"
-        
-        guard let imageURL = NSURL(string: "http://itlife009.com/ILEX/resouce/10003-11-102-L.jpg") else {
-            return nil
-        }
-        self.image = imageURL
-    }
 }
 
-
-class ProductListModel {
-    
-    
+struct ProductListModel {
+    var product: Product?
+    var products: [Product]?
+    init(item: NSArray) {
+        var array: [Product] = []
+        
+        for (i, value) in item.enumerated() {
+            let nsItem = value as! NSDictionary
+            let visibleCode = nsItem.object(forKey: "VisibleCode") as! Int
+            
+            if visibleCode != 3 {
+            
+                let id = nsItem.object(forKey: "ID") as! String
+                let title = nsItem.object(forKey: "Title") as! String
+                let value = nsItem.object(forKey: "Value") as! Int
+                let image = nsItem.object(forKey: "Image") as! String
+                let description = nsItem.object(forKey: "Description") as! String
+                
+                array.append(Product(id: id, title: title, value: value, image: image, visibleCode: visibleCode, description: description))
+            }
+        }
+        self.products = array
+    }
 }

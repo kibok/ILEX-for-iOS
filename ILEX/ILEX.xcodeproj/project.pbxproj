@@ -21,7 +21,9 @@
 		21419CF71D8BE1B700A282D8 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */; };
 		21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */; };
 		21419CFF1D8BE53600A282D8 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */; };
+		2144435F1D94FFDD00E302BF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */; };
 		216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F90B81D90FE4E00874943 /* ProductListModel.swift */; };
+		21AC497B1D943A4600787942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC497A1D943A4600787942 /* APIManager.swift */; };
 		21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B835A91D91100600355207 /* PlusMinusButton.swift */; };
 		21B835AC1D91101C00355207 /* PlusMinusButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B835AB1D91101C00355207 /* PlusMinusButton.xib */; };
 		21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E80D861D90DBD600E5C7E4 /* Setting.storyboard */; };
@@ -71,7 +73,9 @@
 		21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		216F90B81D90FE4E00874943 /* ProductListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
+		21AC497A1D943A4600787942 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		21B835A91D91100600355207 /* PlusMinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		21B835AB1D91101C00355207 /* PlusMinusButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusMinusButton.xib; sourceTree = "<group>"; };
 		21E80D871D90DBD600E5C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				21419CE51D8B807800A282D8 /* Models */,
 				21419CE71D8B80EA00A282D8 /* SharedObject */,
 				21419CE81D8B810500A282D8 /* Services */,
+				2144435D1D94FF9800E302BF /* Extensions */,
 				21419CE61D8B80A000A282D8 /* Resources */,
 				21419CBF1D8B805600A282D8 /* LaunchScreen.storyboard */,
 				21419CC21D8B805600A282D8 /* Info.plist */,
@@ -208,6 +213,7 @@
 		21419CE81D8B810500A282D8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				21AC497A1D943A4600787942 /* APIManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -243,6 +249,14 @@
 				21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */,
 			);
 			name = ViewParts;
+			sourceTree = "<group>";
+		};
+		2144435D1D94FF9800E302BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		980C24C0587EEC079EA6982D /* Frameworks */ = {
@@ -533,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21AC497B1D943A4600787942 /* APIManager.swift in Sources */,
 				216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */,
 				C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */,
 				21419CF31D8B8FAF00A282D8 /* OrderConfirmationViewController.swift in Sources */,
@@ -543,6 +558,7 @@
 				21419CB71D8B805600A282D8 /* AppDelegate.swift in Sources */,
 				21419CEF1D8B8F7E00A282D8 /* ProductDetailViewController.swift in Sources */,
 				21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */,
+				2144435F1D94FFDD00E302BF /* UIImageViewExtension.swift in Sources */,
 				21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

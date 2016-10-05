@@ -12,12 +12,12 @@ import Alamofire
 class ProductSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var productTalbeView: UITableView!
-    
-    let apiManager = APIManager()
     var viewModel: ProductListModel?
+    let apiManager = APIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.productTalbeView.delegate = self
         self.productTalbeView.dataSource = self
         
@@ -30,37 +30,31 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         guard let count = self.viewModel?.products?.count else { return 0 }
-        
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
-        
+                
         guard let item = self.viewModel else { return cell }
         let itemIndexRow = item.products?[indexPath.row]
 
-        
-        cell.itemImage?.downloadedFrom(link: (itemIndexRow?.image)!)
-
-        
-        cell.itemDescription.text = itemIndexRow?.description
-        cell.itemTitle.text = itemIndexRow?.title
-        cell.itemValue.text = "¥\(itemIndexRow!.value)円"
-
+        if itemIndexRow?.visibleCode == 1 {
+            cell.itemImage?.downloadedFrom(link: (itemIndexRow?.image)!)
+            cell.itemDescription.text = itemIndexRow?.description
+            cell.itemTitle.text = itemIndexRow?.title
+            cell.itemValue.text = "¥\(itemIndexRow!.value)円"
+        }
         return cell
     }
     
@@ -73,6 +67,9 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             let vc = (segue.destination as? ProductDetailViewController)!
             guard let row = self.productTalbeView.indexPathForSelectedRow?.row else { return }
             vc.viewModel = self.viewModel?.products?[row]
+            
+            let size = self.viewModel?.products?.filter{  $0.productNumber == self.viewModel?.products?[row].productNumber  }.map { $0.size }
+            vc.size = size
         }
     }
     
@@ -83,6 +80,10 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             self.viewModel = ProductListModel(item: item)
             self.productTalbeView.reloadData()
         })
+    }
+    
+    func getItemSize(){
+        
     }
 }
 

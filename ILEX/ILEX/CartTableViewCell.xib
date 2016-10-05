@@ -20,7 +20,7 @@
                                 <constraint firstAttribute="height" constant="100" id="cN7-dc-z17"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7k-RK-ILr">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7k-RK-ILr">
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                             </constraints>
                             <state key="normal" title="Button"/>
                             <connections>
-                                <action selector="deleteList:" destination="iN0-l3-epB" eventType="touchUpInside" id="rxc-6W-8Zw"/>
+                                <action selector="deleteItem:" destination="iN0-l3-epB" eventType="touchUpInside" id="XHI-Oi-2Eg"/>
                             </connections>
                         </button>
                     </subviews>
@@ -53,13 +53,14 @@
                         <constraint firstAttribute="height" constant="130" id="CPl-oW-bWW"/>
                         <constraint firstItem="hbG-7n-Nu3" firstAttribute="leading" secondItem="pP0-hz-Ltz" secondAttribute="trailing" constant="15" id="H7G-mm-7Ov"/>
                         <constraint firstItem="7qt-hd-M9D" firstAttribute="centerY" secondItem="4ft-Zp-p00" secondAttribute="centerY" id="OKJ-if-8JV"/>
+                        <constraint firstAttribute="trailing" secondItem="v7k-RK-ILr" secondAttribute="trailing" constant="15" id="OYd-yl-pKZ"/>
                         <constraint firstItem="pP0-hz-Ltz" firstAttribute="leading" secondItem="a82-j1-wFc" secondAttribute="leading" constant="15" id="boL-st-nRD"/>
-                        <constraint firstItem="4ft-Zp-p00" firstAttribute="top" secondItem="hbG-7n-Nu3" secondAttribute="bottom" constant="15" id="dE0-5E-fja"/>
+                        <constraint firstItem="4ft-Zp-p00" firstAttribute="top" secondItem="hbG-7n-Nu3" secondAttribute="bottom" constant="10" id="dE0-5E-fja"/>
                         <constraint firstItem="v7k-RK-ILr" firstAttribute="top" secondItem="a82-j1-wFc" secondAttribute="top" constant="15" id="ffB-bR-tnJ"/>
                         <constraint firstAttribute="trailing" secondItem="7qt-hd-M9D" secondAttribute="trailing" constant="15" id="kqa-sc-Zyj"/>
                         <constraint firstAttribute="bottom" secondItem="pP0-hz-Ltz" secondAttribute="bottom" constant="15" id="oGx-RJ-PWe"/>
                         <constraint firstItem="v7k-RK-ILr" firstAttribute="leading" secondItem="pP0-hz-Ltz" secondAttribute="trailing" constant="15" id="tIA-wT-FHu"/>
-                        <constraint firstItem="hbG-7n-Nu3" firstAttribute="top" secondItem="v7k-RK-ILr" secondAttribute="bottom" constant="15" id="vSp-bc-afq"/>
+                        <constraint firstItem="hbG-7n-Nu3" firstAttribute="top" secondItem="v7k-RK-ILr" secondAttribute="bottom" constant="10" id="vSp-bc-afq"/>
                     </constraints>
                 </view>
             </subviews>
@@ -71,6 +72,12 @@
                 <constraint firstItem="a82-j1-wFc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b34-dl-wXV"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cartCount" destination="4ft-Zp-p00" id="xOv-aY-56x"/>
+                <outlet property="cartImage" destination="pP0-hz-Ltz" id="evC-Og-pwe"/>
+                <outlet property="cartTitle" destination="v7k-RK-ILr" id="cKE-1q-cw9"/>
+                <outlet property="cartValue" destination="hbG-7n-Nu3" id="pnN-MF-BXz"/>
+            </connections>
             <point key="canvasLocation" x="95.5" y="-214"/>
         </view>
     </objects>

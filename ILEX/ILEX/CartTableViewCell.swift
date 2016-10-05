@@ -8,28 +8,21 @@
 
 import UIKit
 
-@objc protocol ReservationListTableViewCellDelegate {
-    func a()
+protocol CartTableViewCellDelegate: class {
+    func cartTableViewCell(tag: Int)
 }
+
 class CartTableViewCell: UITableViewCell {
 
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var cartImage: UIImageView!
+    @IBOutlet weak var cartCount: UILabel!
+    @IBOutlet weak var cartValue: UILabel!
+    @IBOutlet weak var cartTitle: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    weak var delegate: CartTableViewCellDelegate?
     
-    weak var delegate: ReservationListTableViewCellDelegate?
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-    @IBAction func deleteList(_ sender: AnyObject) {
-        print(self.tag)
-        self.delegate?.a()
+    @IBAction func deleteItem(_ sender: AnyObject) {
+        self.delegate?.cartTableViewCell(tag: self.tag)
     }
 }

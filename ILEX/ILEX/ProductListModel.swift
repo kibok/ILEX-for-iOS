@@ -15,11 +15,14 @@ struct Product {
     let image: String
     let visibleCode: Int
     let description: String
+    let size: String
+    let productNumber: String
 }
 
 struct ProductListModel {
     var product: Product?
     var products: [Product]?
+    
     init(item: NSArray) {
         var array: [Product] = []
         
@@ -29,13 +32,15 @@ struct ProductListModel {
             
             if visibleCode != 3 {
             
-                let id = nsItem.object(forKey: "ID") as! String
+                var id = nsItem.object(forKey: "ID") as! String
                 let title = nsItem.object(forKey: "Title") as! String
                 let value = nsItem.object(forKey: "Value") as! Int
                 let image = nsItem.object(forKey: "Image") as! String
                 let description = nsItem.object(forKey: "Description") as! String
-                
-                array.append(Product(id: id, title: title, value: value, image: image, visibleCode: visibleCode, description: description))
+                let size = id.components(separatedBy: "-").last!
+                let productNumber = id.components(separatedBy: "-")[2]
+                                
+                array.append(Product(id: id, title: title, value: value, image: image, visibleCode: visibleCode, description: description, size: size, productNumber: productNumber))
             }
         }
         self.products = array

@@ -7,4 +7,6 @@ target 'ILEX' do
 
   # Pods for ILEX
      pod 'Alamofire', '~> 4.0'
+     pod 'SwiftyUserDefaults'
+     pod 'KeychainAccess'
 end

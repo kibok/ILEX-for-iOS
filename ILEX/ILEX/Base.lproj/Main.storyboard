@@ -10,7 +10,7 @@
         <!--タイトル-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ProductSelectViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductSelectVC" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ProductSelectViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="1" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vtw-Qt-9e0" id="K8f-CZ-UfH">
-                                            <frame key="frameInset" width="342" height="149.5"/>
+                                            <frame key="frameInset" width="342" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -50,12 +50,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="タイトル" id="Kwr-OF-cin">
-                        <barButtonItem key="leftBarButtonItem" title="メニュー" id="MoJ-42-a1B">
+                        <barButtonItem key="leftBarButtonItem" image="Menu Filled" id="MoJ-42-a1B">
+                            <color key="tintColor" red="0.89803921568627454" green="0.0" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Ocf-S4-yY5" kind="presentation" modalTransitionStyle="coverVertical" id="Z0a-8g-xZ1"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="カゴ" id="WEp-zI-lAF">
+                        <barButtonItem key="rightBarButtonItem" image="Shopping Cart Filled" id="WEp-zI-lAF">
+                            <color key="tintColor" red="0.89803921568627454" green="0.0" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="WHc-RE-Qbv" kind="show" id="aFM-PO-VyB"/>
                             </connections>
@@ -63,7 +65,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="productTalbeView" destination="ZRp-SC-doA" id="ikI-dP-DTK"/>
-                        <segue destination="ka7-Pe-x7c" kind="push" identifier="toProductDetailViewController" id="Aj8-8Z-t8p"/>
+                        <segue destination="ka7-Pe-x7c" kind="show" identifier="toProductDetailViewController" id="Aj8-8Z-t8p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,7 +75,7 @@
         <!--Order Confirmation View Controller-->
         <scene sceneID="AkC-df-1DE">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="oxC-vd-s7g" customClass="OrderConfirmationViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderConfirmationVC" automaticallyAdjustsScrollViewInsets="NO" id="oxC-vd-s7g" customClass="OrderConfirmationViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JWp-dS-S8W"/>
                         <viewControllerLayoutGuide type="bottom" id="mcq-8q-iWR"/>
@@ -85,13 +87,13 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xI3-wE-JfA">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-Cf-Hf3">
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="OMn-04-mah"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B58-we-fJX">
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="syf-si-6uB"/>
                                         </constraints>
@@ -112,7 +114,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnA-VL-OaZ">
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Ihp-eO-Bfw"/>
                                         </constraints>
@@ -141,10 +143,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIe-9I-dvc">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEn-Aw-MI4">
+                                        <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ymi-Nb-8mM"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="注文確認">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendOrderRequest:" destination="oxC-vd-s7g" eventType="touchUpInside" id="7gY-ci-75p"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="460-6P-fdQ">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -174,6 +182,9 @@
                             <constraint firstItem="mcq-8q-iWR" firstAttribute="top" secondItem="dIe-9I-dvc" secondAttribute="bottom" id="s8b-sC-LjD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Zvi-Tw-fQm" kind="show" id="MBU-KR-GQR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8t1-CW-AZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,12 +206,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vne-VO-THi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3296" y="-1418"/>
+            <point key="canvasLocation" x="3286" y="-1418"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="59c-0J-p6q">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ka7-Pe-x7c" customClass="ProductDetailViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailVC" automaticallyAdjustsScrollViewInsets="NO" id="ka7-Pe-x7c" customClass="ProductDetailViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nAf-Nk-kR5"/>
                         <viewControllerLayoutGuide type="bottom" id="Rk1-An-jfH"/>
@@ -228,7 +239,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daD-4f-j0e">
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.0" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R6y-Mc-KlO"/>
+                                    <constraint firstAttribute="width" constant="150" id="fEW-c6-JGr"/>
+                                </constraints>
+                                <state key="normal" title="カートに入れる">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addProductToCart:" destination="ka7-Pe-x7c" eventType="touchUpInside" id="UDM-AZ-NIZ"/>
                                 </connections>
@@ -242,6 +260,13 @@
                                     <action selector="toSizePickerView:" destination="ka7-Pe-x7c" eventType="touchUpInside" id="abG-0g-65d"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfN-je-StI">
+                                <frame key="frameInset" minX="31" minY="508" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -281,7 +306,7 @@
         <!--Size Picker View Controller-->
         <scene sceneID="SdP-N0-YWm">
             <objects>
-                <viewController id="9dm-LT-5UF" customClass="SizePickerViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SizePickerVC" id="9dm-LT-5UF" customClass="SizePickerViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b8z-kT-S0f"/>
                         <viewControllerLayoutGuide type="bottom" id="Gzy-cB-bod"/>
@@ -314,12 +339,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1PF-WN-bct" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="K2m-x6-wRV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1625" y="-682"/>
+            <point key="canvasLocation" x="1625" y="-578"/>
         </scene>
         <!--カート-->
         <scene sceneID="qb3-1g-jVb">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WHc-RE-Qbv" customClass="CartViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartVC" automaticallyAdjustsScrollViewInsets="NO" id="WHc-RE-Qbv" customClass="CartViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="god-xR-xVa"/>
                         <viewControllerLayoutGuide type="bottom" id="xvZ-Iv-1s7"/>
@@ -328,6 +353,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カートに商品がありません。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrV-RT-9e3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kjK-ob-e1T">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -335,7 +365,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PuX-gO-N9v" id="2lA-yl-fcd">
-                                            <frame key="frameInset" width="375" height="129.5"/>
+                                            <frame key="frameInset" width="375" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -344,29 +374,41 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYs-Ew-EsH">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-Fy-gfA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-Fy-gfA">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-bL-SMG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-bL-SMG">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.8980392157" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIT-9M-Hor">
+                                        <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Vtf-oV-tHF"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="レジに進む">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="oxC-vd-s7g" kind="show" id="dBa-sB-OCV"/>
                                         </connections>
                                     </button>
+                                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aP0-FF-1bH">
+                                        <color key="backgroundColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="IVa-r0-mWx"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="lE7-Fy-gfA" firstAttribute="leading" secondItem="TYs-Ew-EsH" secondAttribute="leading" constant="15" id="1Ub-GJ-aic"/>
+                                    <constraint firstAttribute="trailing" secondItem="aP0-FF-1bH" secondAttribute="trailing" id="E2e-mc-aTY"/>
+                                    <constraint firstItem="aP0-FF-1bH" firstAttribute="leading" secondItem="TYs-Ew-EsH" secondAttribute="leading" id="JQe-6x-hpG"/>
+                                    <constraint firstItem="aP0-FF-1bH" firstAttribute="top" secondItem="TYs-Ew-EsH" secondAttribute="top" id="M33-6F-826"/>
                                     <constraint firstAttribute="height" constant="100" id="Tu5-Re-xhr"/>
                                     <constraint firstAttribute="trailing" secondItem="QIT-9M-Hor" secondAttribute="trailing" constant="15" id="bKj-Ba-V4b"/>
                                     <constraint firstAttribute="trailing" secondItem="dMg-bL-SMG" secondAttribute="trailing" constant="15" id="eoq-ys-xWV"/>
@@ -381,9 +423,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kjK-ob-e1T" secondAttribute="trailing" id="AL6-ex-FFr"/>
                             <constraint firstItem="TYs-Ew-EsH" firstAttribute="top" secondItem="kjK-ob-e1T" secondAttribute="bottom" id="E89-hn-iDC"/>
+                            <constraint firstItem="QrV-RT-9e3" firstAttribute="centerX" secondItem="FKN-jH-8YI" secondAttribute="centerX" id="LSh-JH-Fhi"/>
                             <constraint firstItem="kjK-ob-e1T" firstAttribute="leading" secondItem="FKN-jH-8YI" secondAttribute="leading" id="XOy-l4-jPY"/>
                             <constraint firstItem="TYs-Ew-EsH" firstAttribute="leading" secondItem="FKN-jH-8YI" secondAttribute="leading" id="ll3-Ps-uPQ"/>
                             <constraint firstItem="kjK-ob-e1T" firstAttribute="top" secondItem="god-xR-xVa" secondAttribute="bottom" id="oe1-Ze-dDT"/>
+                            <constraint firstItem="QrV-RT-9e3" firstAttribute="centerY" secondItem="FKN-jH-8YI" secondAttribute="centerY" id="tSY-kl-S8b"/>
                             <constraint firstAttribute="trailing" secondItem="TYs-Ew-EsH" secondAttribute="trailing" id="yBh-3k-QQs"/>
                             <constraint firstItem="xvZ-Iv-1s7" firstAttribute="top" secondItem="TYs-Ew-EsH" secondAttribute="bottom" id="yMP-NR-wGW"/>
                         </constraints>
@@ -396,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHH-3Y-hvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1625" y="-1418"/>
+            <point key="canvasLocation" x="1624.8" y="-1418.1409295352325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qhf-fl-wb5">
@@ -414,7 +458,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUN-yo-yMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1039" y="-1417"/>
+            <point key="canvasLocation" x="-1009" y="-1417"/>
         </scene>
         <!--Setting-->
         <scene sceneID="AMK-gk-sns">
@@ -425,6 +469,10 @@
             <point key="canvasLocation" x="-91" y="-970"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Menu Filled" width="22" height="22"/>
+        <image name="Shopping Cart Filled" width="22" height="22"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aFM-PO-VyB"/>
     </inferredMetricsTieBreakers>

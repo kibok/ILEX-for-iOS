@@ -19,6 +19,7 @@ class CartProductModel: NSObject, NSCoding {
     let size: String
     
     init(id: String, title: String, value: Int, image: String, visibleCode: Int, des: String, count: Int, size: String ) {
+        
         self.id = id
         self.title = title
         self.value = value
@@ -38,7 +39,7 @@ class CartProductModel: NSObject, NSCoding {
         let des = aDecoder.decodeObject(forKey: "des") as! String
         let count = aDecoder.decodeInteger(forKey: "count")
         let size = aDecoder.decodeObject(forKey: "size") as! String
-            self.init(id: id, title: title, value: value, image: image, visibleCode: visibleCode, des: des, count: count, size: size )
+        self.init(id: id, title: title, value: value, image: image, visibleCode: visibleCode, des: des, count: count, size: size )
     }
     
     func encode(with aCoder: NSCoder) {
@@ -52,3 +53,4 @@ class CartProductModel: NSObject, NSCoding {
         aCoder.encode(size, forKey: "size")
     }
 }
+

@@ -67,9 +67,11 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             let vc = (segue.destination as? ProductDetailViewController)!
             guard let row = self.productTalbeView.indexPathForSelectedRow?.row else { return }
             vc.viewModel = self.viewModel?.products?[row]
-            
-            let size = self.viewModel?.products?.filter{  $0.productNumber == self.viewModel?.products?[row].productNumber  }.map { $0.size }
+            let size = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
+                .map { $0.size }
             vc.size = size
+            
+            vc.list = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
         }
     }
     

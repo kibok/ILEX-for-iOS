@@ -26,19 +26,17 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
         self.cartTableView.register(nib, forCellReuseIdentifier: "CartTableViewCell")
         self.cartTableView.tableHeaderView = nil
+
         
-        let cartListNSData = self.userDefaults.object(forKey: "cartList") as! Data
-        self.cartList = NSKeyedUnarchiver.unarchiveObject(with: cartListNSData) as! [CartProductModel]
-        self.cartTableView.isHidden = self.cartList.count == 0 ? true : false
-        self.footerView.isHidden = self.cartList.count == 0 ? true : false
-        self.cartTableView.reloadData()
-        
-//        if self.cartList.count == 0 {
-//            self.cartTableView.isHidden = true
-//            self.footerView.isHidden = true
-//        } else {
-//            self.cartTableView.reloadData()
-//        }
+        if UserData.cartList.count == 0 {
+            self.cartTableView.isHidden = true
+            self.footerView.isHidden = true
+        } else {
+            self.cartTableView.isHidden = false
+            self.footerView.isHidden = false
+            self.cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
+            self.cartTableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,21 +61,19 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.cartCount.text = "\(self.cartList[indexPath.row].count)"
         cell.cartValue.text = "\(self.cartList[indexPath.row].value * self.cartList[indexPath.row].count)"
         cell.cartImage.downloadedFrom(link: self.cartList[indexPath.row].image)
-        cell.delegate = self
+        cell.delegate = self   
         return cell
     }
     
     func cartTableViewCell(tag: Int) {
         self.cartList.remove(at: tag)
-        
-        let cartListNSData = NSKeyedArchiver.archivedData(withRootObject: self.cartList)
-        self.userDefaults.set(cartListNSData, forKey: "cartList")
-        self.userDefaults.synchronize()
-        
         if self.cartList.count == 0 {
             self.cartTableView.isHidden = true
             self.footerView.isHidden = true
+            UserData.cartList.removeAll()
         } else {
+            let cartListNSData = NSKeyedArchiver.archivedData(withRootObject: self.cartList)
+            UserData.cartList = cartListNSData
             self.cartTableView.reloadData()
         }
     }

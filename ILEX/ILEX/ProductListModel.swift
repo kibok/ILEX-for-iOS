@@ -20,19 +20,17 @@ struct Product {
 }
 
 struct ProductListModel {
-    var product: Product?
     var products: [Product]?
     
     init(item: NSArray) {
         var array: [Product] = []
         
-        for (i, value) in item.enumerated() {
+        for (_, value) in item.enumerated() {
             let nsItem = value as! NSDictionary
             let visibleCode = nsItem.object(forKey: "VisibleCode") as! Int
             
             if visibleCode != 3 {
-            
-                var id = nsItem.object(forKey: "ID") as! String
+                let id = nsItem.object(forKey: "ID") as! String
                 let title = nsItem.object(forKey: "Title") as! String
                 let value = nsItem.object(forKey: "Value") as! Int
                 let image = nsItem.object(forKey: "Image") as! String

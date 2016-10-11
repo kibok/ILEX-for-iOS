@@ -23,12 +23,17 @@
 		21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */; };
 		21419CFF1D8BE53600A282D8 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */; };
 		2144435F1D94FFDD00E302BF /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */; };
+		215781D71DA48C4D00583316 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215781D61DA48C4D00583316 /* UserData.swift */; };
+		216E305F1DA5EADC000B5410 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E305E1DA5EADC000B5410 /* StringExtension.swift */; };
 		216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F90B81D90FE4E00874943 /* ProductListModel.swift */; };
 		21AC497B1D943A4600787942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC497A1D943A4600787942 /* APIManager.swift */; };
 		21AF51DE1D9D4C0E0017FC50 /* SizePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */; };
 		21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B835A91D91100600355207 /* PlusMinusButton.swift */; };
 		21B835AC1D91101C00355207 /* PlusMinusButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B835AB1D91101C00355207 /* PlusMinusButton.xib */; };
 		21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E80D861D90DBD600E5C7E4 /* Setting.storyboard */; };
+		21FDF1861DAA189D0076FD1A /* ConfirmUserMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */; };
+		21FDF1881DAA28A30076FD1A /* CheckPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF1871DAA28A30076FD1A /* CheckPasswordViewController.swift */; };
+		21FDF18A1DAA2AE50076FD1A /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF1891DAA2AE50076FD1A /* UserInfoViewController.swift */; };
 		8FD4EA76357BDA94D7494233 /* Pods_ILEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E5F75EB85D5102EDDC4CA5 /* Pods_ILEX.framework */; };
 		C46FE2BD1D9025DF009B6EF8 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */; };
 		C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */; };
@@ -77,12 +82,17 @@
 		21419CF81D8BE1CF00A282D8 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		215781D61DA48C4D00583316 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		216E305E1DA5EADC000B5410 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		216F90B81D90FE4E00874943 /* ProductListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
 		21AC497A1D943A4600787942 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePickerViewController.swift; sourceTree = "<group>"; };
 		21B835A91D91100600355207 /* PlusMinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		21B835AB1D91101C00355207 /* PlusMinusButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusMinusButton.xib; sourceTree = "<group>"; };
 		21E80D871D90DBD600E5C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
+		21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmUserMailViewController.swift; sourceTree = "<group>"; };
+		21FDF1871DAA28A30076FD1A /* CheckPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPasswordViewController.swift; sourceTree = "<group>"; };
+		21FDF1891DAA2AE50076FD1A /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		8DD9623271A956A0BCAD57C8 /* Pods_ILEXUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEXUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1F1CA9828331CE4DB1F7DE /* Pods-ILEX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.release.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.release.xcconfig"; sourceTree = "<group>"; };
 		C46FE2BC1D9025DF009B6EF8 /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
@@ -211,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				21419CB61D8B805600A282D8 /* AppDelegate.swift */,
+				215781D61DA48C4D00583316 /* UserData.swift */,
 			);
 			name = SharedObject;
 			sourceTree = "<group>";
@@ -226,7 +237,10 @@
 		21419CE91D8B816900A282D8 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				21FDF1871DAA28A30076FD1A /* CheckPasswordViewController.swift */,
+				21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */,
 				C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */,
+				21FDF1891DAA2AE50076FD1A /* UserInfoViewController.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -236,8 +250,8 @@
 			children = (
 				21419CF01D8B8F9500A282D8 /* CartViewController.swift */,
 				21419CF21D8B8FAF00A282D8 /* OrderConfirmationViewController.swift */,
-				21419CB81D8B805600A282D8 /* ProductSelectController.swift */,
 				21419CEE1D8B8F7E00A282D8 /* ProductDetailViewController.swift */,
+				21419CB81D8B805600A282D8 /* ProductSelectController.swift */,
 				21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */,
 			);
 			name = Main;
@@ -260,6 +274,7 @@
 		2144435D1D94FF9800E302BF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				216E305E1DA5EADC000B5410 /* StringExtension.swift */,
 				2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */,
 			);
 			name = Extensions;
@@ -554,18 +569,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				21AC497B1D943A4600787942 /* APIManager.swift in Sources */,
+				21FDF1881DAA28A30076FD1A /* CheckPasswordViewController.swift in Sources */,
 				21AF51DE1D9D4C0E0017FC50 /* SizePickerViewController.swift in Sources */,
+				215781D71DA48C4D00583316 /* UserData.swift in Sources */,
 				216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */,
 				C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */,
 				21419CF31D8B8FAF00A282D8 /* OrderConfirmationViewController.swift in Sources */,
 				21419CF11D8B8F9500A282D8 /* CartViewController.swift in Sources */,
+				21FDF1861DAA189D0076FD1A /* ConfirmUserMailViewController.swift in Sources */,
 				21419CF71D8BE1B700A282D8 /* ProductTableViewCell.swift in Sources */,
+				216E305F1DA5EADC000B5410 /* StringExtension.swift in Sources */,
 				21419CB91D8B805600A282D8 /* ProductSelectController.swift in Sources */,
 				212E1A8D1D911EEB00D98AAB /* XibLoadView.swift in Sources */,
 				21419CB71D8B805600A282D8 /* AppDelegate.swift in Sources */,
 				21297EFA1D990887001AB29C /* CartListModel.swift in Sources */,
 				21419CEF1D8B8F7E00A282D8 /* ProductDetailViewController.swift in Sources */,
 				21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */,
+				21FDF18A1DAA2AE50076FD1A /* UserInfoViewController.swift in Sources */,
 				2144435F1D94FFDD00E302BF /* UIImageViewExtension.swift in Sources */,
 				21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */,
 			);

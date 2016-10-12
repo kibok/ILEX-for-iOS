@@ -9,14 +9,34 @@
 import UIKit
 import Alamofire
 
+struct OrderItem {
+    let JanCode: String
+    let ImageUrl: String
+    let Title: String
+    let Value: String
+    let Number: String
+}
+
+struct OrderListModel {
+    var orderItem: [OrderItem]?
+
+    init(list: [CartProductModel]){
+        
+        self.orderItem = list.map {item in
+            OrderItem(JanCode: item.id, ImageUrl: item.image, Title: item.title, Value: String(item.value), Number: String(item.count))
+        }
+    }
+}
+
 class OrderConfirmationViewController: UIViewController {
     
     var parameters: Parameters = [:]
+    let apimanager = APIManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let a = [
+
+        let item = [
             [
                 "JanCode": "String(商品ID)",
                 "ImageUrl": "String(商品画像URL)※注文履歴で使用。メールだけなら不要。",
@@ -40,40 +60,37 @@ class OrderConfirmationViewController: UIViewController {
             ]
         ]
         
-        let parameters: Parameters = [
+
+        
+
+        let cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
+        
+        let a = OrderListModel(list: cartList)
+        
+        print(a)
+        
+        
+        self.parameters = [
             "user_info": [
-                "Email": "dearkibok@gamil.com",
-                "PostCode": "String(郵便番号)",
-                "Address": "String(住所)",
-                "NameKanji": "String(漢字の名前)",
-                "NameKatakana": "String(カタカナの名前)",
-                "Tell": "Stirng(電話番号)"
+                "Email": UserData.email,
+                "PostCode": UserData.postNumber,
+                "Address": UserData.address,
+                "NameKanji": UserData.name,
+                "NameKatakana": UserData.nameKata,
+                "Tell": UserData.tel
             ],
             "item_info": [
                 "OrderNumber": "String(注文番号) 乱数７桁でOK",
                 "SumValue": 1000,
                 "Postage": 1000,
-                "OrderItem": a
+                "OrderItem": item
             ]
         ]
-        
-        self.parameters = parameters
     }
-    
     
     @IBAction func sendOrderRequest(_ sender: AnyObject) {
-        self.a(parameters: self.parameters)
-    }
-    
-    func a(parameters: Parameters){
-        Alamofire.request("http://itlife009.com/ILEX/test/test_order_mail.php", method: .post, parameters: self.parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
-            response in
-            
-            if let a = response.result.value {
-                print(a)
-            } else {
-                print("error")
-            }
-        }
+
+        self.apimanager.orderRequest(parameters: self.parameters)
+        performSegue(withIdentifier: "toOrderListVC", sender: nil)
     }
 }

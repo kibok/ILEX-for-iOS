@@ -24,7 +24,8 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
         self.productTalbeView.register(nib, forCellReuseIdentifier: "ProductTableViewCell")
         self.productTalbeView.tableHeaderView = nil
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.primaryColor()
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "logo_ilex"))
         self.getItemLsit()
     }
     
@@ -82,10 +83,6 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             self.viewModel = ProductListModel(item: item)
             self.productTalbeView.reloadData()
         })
-    }
-    
-    func getItemSize(){
-        
     }
 }
 

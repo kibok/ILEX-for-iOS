@@ -56,6 +56,7 @@ class ConfirmUserMailViewController: UIViewController {
         if (segue.identifier == "toCheckPasswordVC") {
             let vc = (segue.destination as? CheckPasswordViewController)!
             vc.password = self.password
+            vc.email = self.userMailTextField.text!
         }
     }
 }

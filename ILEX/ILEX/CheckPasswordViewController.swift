@@ -10,6 +10,9 @@ import UIKit
 
 class CheckPasswordViewController: UIViewController {
     var password: String = ""
+    var email: String = ""
+    
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +24,13 @@ class CheckPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func checkButton(_ sender: Any) {
+        
+        if self.textField.text == self.password {
+            UserData.email = self.email
+            dismiss(animated: true, completion: nil)
+        } else {
+            // show alert
+        }
+    }
 }

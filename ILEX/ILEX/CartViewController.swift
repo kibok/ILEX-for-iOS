@@ -77,4 +77,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.cartTableView.reloadData()
         }
     }
+    
+    @IBAction func didTapButton(_ sender: Any) {
+        if (UserData.email?.isEmpty)! || (UserData.address?.isEmpty)! {
+            self.showAlert(message: "「メールアドレス」と「お届け先」が登録されていることを確認してください。設定画面に移動しますか？")
+        } else {
+            performSegue(withIdentifier: "toOrderConfirmVC", sender: nil)
+        }
+    }
 }

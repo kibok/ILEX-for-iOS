@@ -7,21 +7,26 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class UserInfoViewController: UITableViewController {
     
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var nameKatakana: UITextField!
-    @IBOutlet weak var postNumber: UITextField!
-    @IBOutlet weak var address: UITextField!
-    @IBOutlet weak var tel: UITextField!
-    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var nameKatakana: UILabel!
+    @IBOutlet weak var postNumber: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var tel: UILabel!
+    @IBOutlet weak var email: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.name.text = "name"
-        
+        self.name.text = UserData.name
+        self.nameKatakana.text = UserData.nameKata
+        self.postNumber.text = UserData.postNumber
+        self.address.text = UserData.address
+        self.tel.text = UserData.tel
+        self.email.text = UserData.email
     }
     
     override func didReceiveMemoryWarning() {

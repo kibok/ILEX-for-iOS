@@ -23,28 +23,26 @@ class APIManager {
         }
     }
     
-    func orderRequest(parameters: Parameters) {
-        Alamofire.request("http://itlife009.com/ILEX/order_mail.php", method: .post, parameters: parameters ,encoding: JSONEncoding.default).responseString { response in
-            if let result = response.result.value {
-                print(result)
+//    func orderRequest(parameters: Parameters) {
+//        Alamofire.request("http://itlife009.com/ILEX/order_mail.php", method: .post, parameters: parameters ,encoding: JSONEncoding.default).responseString { response in
+//            if let result = response.result.value {
+//                print(result)
+//            } else {
+//                print("error")
+//            }
+//        }
+//    }
+    
+    func orderRequest(parameters: Parameters){
+        Alamofire.request("http://itlife009.com/ILEX/test/test_order_mail.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
+            response in
+            
+            if let a = response.result.value {
+                print(a)
             } else {
                 print("error")
             }
         }
-    }
-    
-    func order(parameters: Parameters) -> String {
-        var result = ""
-        Alamofire.request("http://itlife009.com/ILEX/test/test_order_mail.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
-            response in
-            
-            if let value = response.result.value {
-                result = value
-            } else {
-                result = "error"
-            }
-        }
-        return result
     }
     
     func getMailCertification(parameters: Parameters) {
@@ -59,4 +57,6 @@ class APIManager {
             }
         }
     }
+    
+    
 }

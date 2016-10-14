@@ -68,7 +68,16 @@ class OrderConfirmationViewController: UIViewController {
         let a = OrderListModel(list: cartList)
         
         print(a)
-        
+       
+        let g = cartList.map {
+            [
+                "JanCode": $0.id,
+                "ImageUrl": $0.image,
+                "Title": $0.title,
+                "Value": "\($0.value)",
+                "Number": "\($0.count)"
+            ]
+        }
         
         self.parameters = [
             "user_info": [
@@ -83,7 +92,7 @@ class OrderConfirmationViewController: UIViewController {
                 "OrderNumber": "String(注文番号) 乱数７桁でOK",
                 "SumValue": 1000,
                 "Postage": 1000,
-                "OrderItem": item
+                "OrderItem": g
             ]
         ]
     }

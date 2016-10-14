@@ -51,7 +51,10 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         let itemIndexRow = item.products?[indexPath.row]
 
         if itemIndexRow?.visibleCode == 1 {
-            cell.itemImage?.downloadedFrom(link: (itemIndexRow?.image)!)
+            
+            let url = URL(string: (itemIndexRow?.image)!)
+            
+            cell.itemImage?.downloadedFrom(url: url!)
             cell.itemDescription.text = itemIndexRow?.description
             cell.itemTitle.text = itemIndexRow?.title
             cell.itemValue.text = "¥\(itemIndexRow!.value)円"
@@ -75,6 +78,8 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             vc.list = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
         }
     }
+    
+    
     
     // MARK: - APINetwork
     

@@ -11,6 +11,5 @@ import UIKit
 class PlusMinusButton: XibLoadView {
     
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var plus: UIButton!
-    @IBOutlet weak var minus: UIButton!
+    @IBOutlet weak var button: UIStepper!
 }

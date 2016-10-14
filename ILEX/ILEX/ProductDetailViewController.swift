@@ -13,6 +13,9 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var plusMinusButton: PlusMinusButton!
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var sizeButton: UIButton!
+    @IBOutlet weak var productTitle: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productValue: UILabel!
     
     var viewModel: Product!
     var list: [Product]!
@@ -23,35 +26,30 @@ class ProductDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.plusMinusButton.plus.addTarget(self, action: #selector(ProductDetailViewController.touchUpInsidePlus(sender:)), for: .touchUpInside)
-        self.plusMinusButton.minus.addTarget(self, action: #selector(ProductDetailViewController.touchUpInsideMinus(sender:)), for: .touchUpInside)
+        self.plusMinusButton.button.maximumValue = 30
+        self.plusMinusButton.button.minimumValue = 1
+        self.plusMinusButton.button.value = 1
+        self.plusMinusButton.button.stepValue = 1
+        
+        self.plusMinusButton.button.addTarget(self, action: #selector(ProductDetailViewController.stepperOneChanged(stepper:)), for: UIControlEvents.valueChanged)
         
         self.itemImage.downloadedFrom(link: self.list[0].image)
         self.sizeButton.setTitle(self.list[0].size, for: .normal)
         self.selectedSize = self.list[0].size
         self.title = self.list[0].title
-    }
-
-    func touchUpInsidePlus(sender: AnyObject) {
-        if self.count < 30 {
-            self.count += 1
-        }
-        self.plusMinusButton.label.text = "\(self.count)"
+        self.productValue.text = "\(self.list[0].value)"
+        self.productTitle.text = self.list[0].title
+        self.productDescription.text = self.list[0].description
     }
     
-    func touchUpInsideMinus(sender: AnyObject) {
-        if self.count > 1 {
-            self.count -= 1
-        }
-        self.plusMinusButton.label.text = "\(self.count)"
+    internal func stepperOneChanged(stepper: UIStepper){
+        self.count = Int(stepper.value)
+        self.plusMinusButton.label.text = "\(Int(stepper.value))"
     }
 
     @IBAction func addProductToCart(_ sender: AnyObject) {
         
         let product = self.list.filter { $0.size == self.selectedSize }.first!
-        
-        print(self.selectedSize)
-        
         let cartProductModel = CartProductModel(id: product.id, title: product.title, value: product.value, image: product.image, visibleCode: product.visibleCode, des: product.description, count: self.count, size: self.selectedSize)
         
         var cartList: [CartProductModel] = []
@@ -60,7 +58,6 @@ class ProductDetailViewController: UIViewController {
             cartList.append(cartProductModel)
         } else {
             let cartListNSData = UserData.cartList
-            
             cartList = NSKeyedUnarchiver.unarchiveObject(with: cartListNSData) as! [CartProductModel]
             if checkCarList(cartList: cartList, cartProductModel: cartProductModel) {
                 cartList.append(cartProductModel)
@@ -69,7 +66,7 @@ class ProductDetailViewController: UIViewController {
                 cartList[index] = cartProductModel
             }
         }
-        
+        self.showAlert(message: "カートに追加しました。")
         let cartListNSData = NSKeyedArchiver.archivedData(withRootObject: cartList)
         UserData.cartList = cartListNSData
     }

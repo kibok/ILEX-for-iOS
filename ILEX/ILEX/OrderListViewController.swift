@@ -19,7 +19,14 @@ class OrderListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         
         let shppingListNSData = UserData.shoppingList
-        self.shppingList = NSKeyedUnarchiver.unarchiveObject(with: shppingListNSData) as! [ShoppingListModel]
+
+        if shppingListNSData.count == 0 {
+            self.showAlert(message: "注文履歴がありません。")
+        } else {
+            let list = NSKeyedUnarchiver.unarchiveObject(with: shppingListNSData) as! [ShoppingListModel]
+            
+            self.shppingList = Array(list.reversed())
+        }
         
     }
     
@@ -35,10 +42,10 @@ class OrderListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let a = cell.viewWithTag(1) as! UILabel
-        a.text = self.shppingList[indexPath.row].date
-        let b = cell.viewWithTag(2) as! UILabel
-        b.text = "\(self.shppingList[indexPath.row].totalValue)"
+        let label1 = cell.viewWithTag(1) as! UILabel
+        label1.text = self.shppingList[indexPath.row].date
+        let label2 = cell.viewWithTag(2) as! UILabel
+        label2.text = "\(self.shppingList[indexPath.row].totalValue)"
         
         return cell
     }

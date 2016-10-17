@@ -28,6 +28,8 @@ class SetUserInfoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +47,6 @@ class SetUserInfoTableViewController: UITableViewController {
         UserData.postNumber = "\(self.postNumber.text!)"
         UserData.tel = "\(self.tel.text!)"
         
-        dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }    
 }

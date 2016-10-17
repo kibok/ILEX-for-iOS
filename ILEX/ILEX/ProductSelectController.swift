@@ -30,7 +30,6 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         self.getItemLsit()
         
         ProductViewModel.loadProducts()
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,7 +57,9 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             
             let url = URL(string: (itemIndexRow?.image)!)
             
-            cell.itemImage?.downloadedFrom(url: url!)
+//            cell.itemImage?.downloadedFrom(url: url!)
+
+            cell.itemImage.downloadedFrom(url: url!, contentMode: UIViewContentMode.scaleAspectFit)
             cell.itemDescription.text = itemIndexRow?.description
             cell.itemTitle.text = itemIndexRow?.title
             cell.itemValue.text = "¥\(itemIndexRow!.value)円"
@@ -82,6 +83,7 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             vc.list = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
         }
     }
+    
     // MARK: - APINetwork
     
     func getItemLsit(){

@@ -28,6 +28,28 @@ struct OrderListModel {
     }
 }
 
+struct OrderItems {
+    let JanCode: String
+    let ImageUrl: String
+    let Title: String
+    let Value: String
+    let Number: String
+    
+    func toDictionary() -> [String: String?] {
+        return [
+            "JanCode" : JanCode,
+            "ImageUrl" : ImageUrl,
+            "Title" : Title,
+            "Value" : Value,
+            "Number" : Number,
+        ]
+    }
+}
+
+//let params = [
+//    "emps": emps.map{e in e.toDictionary()}
+//]
+
 class OrderConfirmationViewController: UIViewController {
     
     var parameters: Parameters = [:]
@@ -36,34 +58,6 @@ class OrderConfirmationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let item = [
-            [
-                "JanCode": "String(商品ID)",
-                "ImageUrl": "String(商品画像URL)※注文履歴で使用。メールだけなら不要。",
-                "Title": "String(商品名)",
-                "Value": "String(商品価格)  例)¥3,000",
-                "Number": "String(数量)　例)3"
-            ],
-            [
-                "JanCode": "String(商品ID)",
-                "ImageUrl": "String(商品画像URL)※注文履歴で使用。メールだけなら不要。",
-                "Title": "String(商品名)",
-                "Value": "String(商品価格)  例)¥3,000",
-                "Number": "String(数量)　例)3"
-            ],
-            [
-                "JanCode": "String(商品ID)",
-                "ImageUrl": "String(商品画像URL)※注文履歴で使用。メールだけなら不要。",
-                "Title": "String(商品名)",
-                "Value": "String(商品価格)  例)¥3,000",
-                "Number": "String(数量)　例)3"
-            ]
-        ]
-
-//        let cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
-        
-        let a = OrderListModel(list: self.cartList)
         
         let g = cartList.map {
             [
@@ -91,29 +85,33 @@ class OrderConfirmationViewController: UIViewController {
                 "OrderItem": g
             ]
         ]
+        
+        
+   
     }
     
     @IBAction func sendOrderRequest(_ sender: AnyObject) {
         self.apimanager.orderRequest(parameters: self.parameters)
-//        performSegue(withIdentifier: "toOrderListVC", sender: nil)
         
-        //成功
+        //成功失敗処理必要
         let id = self.cartList.map { $0.id }
         let count = self.cartList.map { $0.count }
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
+        let today = "\(Date())"
 
-        let a = ShoppingListModel(date: "Today", id: id, count: count, totalValue: totalValue)
+        let list = ShoppingListModel(date: today, id: id, count: count, totalValue: totalValue)
         var shppingList: [ShoppingListModel] = []
         
         if UserData.shoppingList.count == 0 {
-            shppingList.append(a)
+            shppingList.append(list)
         } else {
             let shppingListNSData = UserData.shoppingList
             shppingList = NSKeyedUnarchiver.unarchiveObject(with: shppingListNSData) as! [ShoppingListModel]
-            shppingList.append(a)
+            shppingList.append(list)
         }
         UserData.shoppingList = NSKeyedArchiver.archivedData(withRootObject: shppingList)
-        
+        UserData.cartList.removeAll()
+        _ = navigationController?.popToRootViewController(animated: true)
     }
 }
 

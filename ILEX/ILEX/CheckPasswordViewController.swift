@@ -28,7 +28,8 @@ class CheckPasswordViewController: UIViewController {
         
         if self.textField.text == self.password {
             UserData.email = self.email
-            dismiss(animated: true, completion: nil)
+            _ = navigationController?.popToRootViewController(animated: true)
+//            self.presentViewController(secondViewController, animated: false, completion: nil)
         } else {
             // show alert
         }

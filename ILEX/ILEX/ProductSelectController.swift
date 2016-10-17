@@ -26,7 +26,11 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         self.productTalbeView.tableHeaderView = nil
         self.navigationController?.navigationBar.tintColor = UIColor.primaryColor()
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "logo_ilex"))
+     
         self.getItemLsit()
+        
+        ProductViewModel.loadProducts()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,9 +82,6 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
             vc.list = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
         }
     }
-    
-    
-    
     // MARK: - APINetwork
     
     func getItemLsit(){

@@ -30,15 +30,13 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.cartTableView.tableHeaderView = nil
         if UserData.cartList.count == 0 {
             self.cartTableView.isHidden = true
-//            self.footerView.isHidden = true
         } else {
             self.cartTableView.isHidden = false
-//            self.footerView.isHidden = false
             self.cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
             self.cartTableView.reloadData()
         }
         self.productCount.text = "合計\(self.cartList.count)店"
-        self.totalPrice.text = "\(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })"
+        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税別)"
     }
     
     // MARK: - Table view data source
@@ -55,8 +53,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
         cell.tag = (indexPath as NSIndexPath).row
         cell.cartTitle.text = self.cartList[indexPath.row].title
-        cell.cartCount.text = "\(self.cartList[indexPath.row].count)"
-        cell.cartValue.text = "\(self.cartList[indexPath.row].value * self.cartList[indexPath.row].count)"
+        cell.cartCount.text = "数量:\(self.cartList[indexPath.row].count)個"
+        cell.cartValue.text = "¥\(self.cartList[indexPath.row].value * self.cartList[indexPath.row].count)(税別)"
         cell.cartImage.downloadedFrom(link: self.cartList[indexPath.row].image)
         cell.delegate = self   
         return cell
@@ -73,8 +71,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             UserData.cartList = cartListNSData
             self.cartTableView.reloadData()
         }
-        self.productCount.text = "合計\(self.cartList.count)店"
-        self.totalPrice.text = "\(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })"
+        self.productCount.text = "合計 \(self.cartList.count) 店"
+        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税別)"
     }
     
     @IBAction func didTapButton(_ sender: Any) {

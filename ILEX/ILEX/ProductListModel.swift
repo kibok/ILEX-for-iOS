@@ -44,3 +44,30 @@ struct ProductListModel {
         self.products = array
     }
 }
+
+class ProductViewModel {
+    
+    private static var productCache: [Product?] = []
+    
+    class func loadProducts() {
+        let apiManager = APIManager()
+        apiManager.getItemList(completionHandler: { item in
+            let a = ProductListModel(item: item)
+            self.productCache = a.products!
+        })
+    }
+    
+    class var products: [Product?] {
+        print(self.productCache)
+        return self.productCache
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211AC0AF1DB3C9A0007A2444 /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211AC0AE1DB3C9A0007A2444 /* ShoppingListModel.swift */; };
+		211AC0B11DB3E329007A2444 /* OrderListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211AC0B01DB3E329007A2444 /* OrderListDetailViewController.swift */; };
 		21297EFA1D990887001AB29C /* CartListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21297EF91D990887001AB29C /* CartListModel.swift */; };
 		212E1A8D1D911EEB00D98AAB /* XibLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E1A8C1D911EEB00D98AAB /* XibLoadView.swift */; };
 		21419CB71D8B805600A282D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21419CB61D8B805600A282D8 /* AppDelegate.swift */; };
@@ -64,6 +66,8 @@
 		045FA73D9BE815E5D3E2533A /* Pods-ILEX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.debug.xcconfig"; sourceTree = "<group>"; };
 		0750B78AA45BDA261FCEE5EE /* Pods_ILEXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E5F75EB85D5102EDDC4CA5 /* Pods_ILEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		211AC0AE1DB3C9A0007A2444 /* ShoppingListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
+		211AC0B01DB3E329007A2444 /* OrderListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListDetailViewController.swift; sourceTree = "<group>"; };
 		21297EF91D990887001AB29C /* CartListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartListModel.swift; sourceTree = "<group>"; };
 		212E1A8C1D911EEB00D98AAB /* XibLoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadView.swift; sourceTree = "<group>"; };
 		21419CB31D8B805600A282D8 /* ILEX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILEX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				21297EF91D990887001AB29C /* CartListModel.swift */,
+				211AC0AE1DB3C9A0007A2444 /* ShoppingListModel.swift */,
 				216F90B81D90FE4E00874943 /* ProductListModel.swift */,
 			);
 			name = Models;
@@ -249,6 +254,8 @@
 			children = (
 				21FDF1871DAA28A30076FD1A /* CheckPasswordViewController.swift */,
 				21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */,
+				21A3E7571DAD21C100171DED /* OrderListViewController.swift */,
+				211AC0B01DB3E329007A2444 /* OrderListDetailViewController.swift */,
 				21A3E7501DACF5AE00171DED /* SetUserInfoTableViewController.swift */,
 				C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */,
 				21FDF1891DAA2AE50076FD1A /* UserInfoViewController.swift */,
@@ -261,7 +268,6 @@
 			children = (
 				21419CF01D8B8F9500A282D8 /* CartViewController.swift */,
 				21419CF21D8B8FAF00A282D8 /* OrderConfirmationViewController.swift */,
-				21A3E7571DAD21C100171DED /* OrderListViewController.swift */,
 				21419CEE1D8B8F7E00A282D8 /* ProductDetailViewController.swift */,
 				21419CB81D8B805600A282D8 /* ProductSelectController.swift */,
 				21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */,
@@ -596,6 +602,7 @@
 				215781D71DA48C4D00583316 /* UserData.swift in Sources */,
 				216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */,
 				C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */,
+				211AC0AF1DB3C9A0007A2444 /* ShoppingListModel.swift in Sources */,
 				21A3E7581DAD21C100171DED /* OrderListViewController.swift in Sources */,
 				21A3E7561DAD1C4900171DED /* UIViewControllerExtension.swift in Sources */,
 				21419CF31D8B8FAF00A282D8 /* OrderConfirmationViewController.swift in Sources */,
@@ -610,6 +617,7 @@
 				21419CEF1D8B8F7E00A282D8 /* ProductDetailViewController.swift in Sources */,
 				21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */,
 				21FDF18A1DAA2AE50076FD1A /* UserInfoViewController.swift in Sources */,
+				211AC0B11DB3E329007A2444 /* OrderListDetailViewController.swift in Sources */,
 				21A3E7541DAD0E9800171DED /* UIColorExtension.swift in Sources */,
 				2144435F1D94FFDD00E302BF /* UIImageViewExtension.swift in Sources */,
 				21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */,

@@ -12,6 +12,7 @@ import KeychainAccess
 
 extension DefaultsKeys {
     static let cartList = DefaultsKey<Data>("cartList")
+    static let shoppingList = DefaultsKey<Data>("shoppingList")
 }
 
 class UserData {
@@ -77,6 +78,15 @@ class UserData {
         }
         get {
             return keychain["email"]
+        }
+    }
+    
+    class var shoppingList: Data {
+        set {
+            Defaults[.shoppingList] = newValue
+        }
+        get {
+            return Defaults[.shoppingList]
         }
     }
 }

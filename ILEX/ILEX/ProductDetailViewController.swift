@@ -25,7 +25,7 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.plusMinusButton.button.maximumValue = 30
         self.plusMinusButton.button.minimumValue = 1
         self.plusMinusButton.button.value = 1
@@ -37,7 +37,7 @@ class ProductDetailViewController: UIViewController {
         self.sizeButton.setTitle(self.list[0].size, for: .normal)
         self.selectedSize = self.list[0].size
         self.title = self.list[0].title
-        self.productValue.text = "\(self.list[0].value)"
+        self.productValue.text = "¥\(self.list[0].value)(税別)"
         self.productTitle.text = self.list[0].title
         self.productDescription.text = self.list[0].description
     }

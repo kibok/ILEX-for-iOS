@@ -28,12 +28,12 @@
 		215781D71DA48C4D00583316 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215781D61DA48C4D00583316 /* UserData.swift */; };
 		216E305F1DA5EADC000B5410 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E305E1DA5EADC000B5410 /* StringExtension.swift */; };
 		216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F90B81D90FE4E00874943 /* ProductListModel.swift */; };
+		21970FCF1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21970FCE1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift */; };
 		21A3E7511DACF5AE00171DED /* SetUserInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3E7501DACF5AE00171DED /* SetUserInfoTableViewController.swift */; };
 		21A3E7541DAD0E9800171DED /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3E7531DAD0E9800171DED /* UIColorExtension.swift */; };
 		21A3E7561DAD1C4900171DED /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3E7551DAD1C4900171DED /* UIViewControllerExtension.swift */; };
 		21A3E7581DAD21C100171DED /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3E7571DAD21C100171DED /* OrderListViewController.swift */; };
 		21AC497B1D943A4600787942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC497A1D943A4600787942 /* APIManager.swift */; };
-		21AF51DE1D9D4C0E0017FC50 /* SizePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */; };
 		21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B835A91D91100600355207 /* PlusMinusButton.swift */; };
 		21B835AC1D91101C00355207 /* PlusMinusButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B835AB1D91101C00355207 /* PlusMinusButton.xib */; };
 		21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E80D861D90DBD600E5C7E4 /* Setting.storyboard */; };
@@ -93,12 +93,12 @@
 		215781D61DA48C4D00583316 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		216E305E1DA5EADC000B5410 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		216F90B81D90FE4E00874943 /* ProductListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListModel.swift; sourceTree = "<group>"; };
+		21970FCE1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldWithDoneButton.swift; sourceTree = "<group>"; };
 		21A3E7501DACF5AE00171DED /* SetUserInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUserInfoTableViewController.swift; sourceTree = "<group>"; };
 		21A3E7531DAD0E9800171DED /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		21A3E7551DAD1C4900171DED /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		21A3E7571DAD21C100171DED /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		21AC497A1D943A4600787942 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePickerViewController.swift; sourceTree = "<group>"; };
 		21B835A91D91100600355207 /* PlusMinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		21B835AB1D91101C00355207 /* PlusMinusButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusMinusButton.xib; sourceTree = "<group>"; };
 		21E80D871D90DBD600E5C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
@@ -270,7 +270,6 @@
 				21419CF21D8B8FAF00A282D8 /* OrderConfirmationViewController.swift */,
 				21419CEE1D8B8F7E00A282D8 /* ProductDetailViewController.swift */,
 				21419CB81D8B805600A282D8 /* ProductSelectController.swift */,
-				21AF51DD1D9D4C0E0017FC50 /* SizePickerViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -285,6 +284,7 @@
 				21B835AB1D91101C00355207 /* PlusMinusButton.xib */,
 				21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */,
 				21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */,
+				21970FCE1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift */,
 			);
 			name = ViewParts;
 			sourceTree = "<group>";
@@ -597,7 +597,7 @@
 			files = (
 				21AC497B1D943A4600787942 /* APIManager.swift in Sources */,
 				21FDF1881DAA28A30076FD1A /* CheckPasswordViewController.swift in Sources */,
-				21AF51DE1D9D4C0E0017FC50 /* SizePickerViewController.swift in Sources */,
+				21970FCF1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift in Sources */,
 				21A3E7511DACF5AE00171DED /* SetUserInfoTableViewController.swift in Sources */,
 				215781D71DA48C4D00583316 /* UserData.swift in Sources */,
 				216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */,

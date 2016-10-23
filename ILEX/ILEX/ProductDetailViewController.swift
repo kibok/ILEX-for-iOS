@@ -8,21 +8,22 @@
 
 import UIKit
 
-class ProductDetailViewController: UIViewController {
+class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var plusMinusButton: PlusMinusButton!
     @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var sizeButton: UIButton!
     @IBOutlet weak var productTitle: UILabel!
     @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var productValue: UILabel!
+    @IBOutlet weak var pickerTextField: UITextField!
+    let pickerView = UIPickerView()
     
     var viewModel: Product!
     var list: [Product]!
     var size: [String]?
     var selectedSize: String!
     var count = 1
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -34,13 +35,28 @@ class ProductDetailViewController: UIViewController {
         self.plusMinusButton.button.addTarget(self, action: #selector(ProductDetailViewController.stepperOneChanged(stepper:)), for: UIControlEvents.valueChanged)
         
         self.itemImage.downloadedFrom(link: self.list[0].image)
-        self.sizeButton.setTitle(self.list[0].size, for: .normal)
         self.selectedSize = self.list[0].size
         self.title = self.list[0].title
         self.productValue.text = "¥\(self.list[0].value)(税別)"
         self.productTitle.text = self.list[0].title
         self.productDescription.text = self.list[0].description
+        self.pickerTextField.text = self.list[0].size
+        
+        pickerView.delegate = self
+        self.pickerTextField.inputView = pickerView
+        
+//        let notification = NotificationCenter.default
+//        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        notification.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let notification = NotificationCenter.default
+        notification.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notification.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+
     
     internal func stepperOneChanged(stepper: UIStepper){
         self.count = Int(stepper.value)
@@ -88,20 +104,31 @@ class ProductDetailViewController: UIViewController {
     @IBAction func toSizePickerView(_ sender: UIButton) {
         performSegue(withIdentifier: "toSizePickerViewController", sender: sender)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if sender is UIButton {
-            let vc = segue.destination as! SizePickerViewController
-            vc.size = self.size
-        }
+
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    @IBAction func didTapOK(segue: UIStoryboardSegue) {
-        if let vc = segue.source as? SizePickerViewController {
-            self.selectedSize = self.list[vc.selectedRow].size
-            self.sizeButton.setTitle(self.list[vc.selectedRow].size, for: .normal)
-            self.itemImage.downloadedFrom(link: self.list[vc.selectedRow].image)
-            self.title = self.list[vc.selectedRow].title
-        }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.list.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.list[row].size
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(list[row])
+        self.selectedSize = self.list[row].size
+        self.pickerTextField.text = self.list[row].size
+        self.title = self.list[row].title
+        self.itemImage.downloadedFrom(link: self.list[row].image)
+    }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.pickerTextField.resignFirstResponder()
+        return true
     }
 }

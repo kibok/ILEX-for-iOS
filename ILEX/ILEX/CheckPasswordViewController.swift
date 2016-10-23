@@ -28,10 +28,10 @@ class CheckPasswordViewController: UIViewController {
         
         if self.textField.text == self.password {
             UserData.email = self.email
-            _ = navigationController?.popToRootViewController(animated: true)
-//            self.presentViewController(secondViewController, animated: false, completion: nil)
+            _ = navigationController?.popToRootViewController(animated: true)            
+            self.showAlert(message: "メールの設定ができました")
         } else {
-            // show alert
+            self.showAlert(message: "メールの設定ができませんでした")
         }
     }
 }

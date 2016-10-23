@@ -76,12 +76,12 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func didTapButton(_ sender: Any) {
-//        if UserData.email == nil || UserData.address == nil {
-//            self.showAlert(message: "「メールアドレス」と「お届け先」が登録されていることを確認してください。設定画面に移動しますか？")
-//        } else if self.cartList.count == 0 {
-//            self.showAlert(message: "カートに商品がありません。")
-//        } else {
+        if UserData.email == nil || UserData.address == nil {
+            self.showAlert(message: "「メールアドレス」と「お届け先」が登録されていることを確認してください。設定画面に移動しますか？")
+        } else if self.cartList.count == 0 {
+            self.showAlert(message: "カートに商品がありません。")
+        } else {
             performSegue(withIdentifier: "toOrderConfirmVC", sender: nil)
-//        }
+        }
     }
 }

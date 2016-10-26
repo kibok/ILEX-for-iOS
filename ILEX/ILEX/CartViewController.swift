@@ -35,8 +35,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
             self.cartTableView.reloadData()
         }
-        self.productCount.text = "合計\(self.cartList.count)店"
-        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税別)"
+        self.productCount.text = "合計\(self.cartList.count)点"
+        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税込)"
     }
     
     // MARK: - Table view data source
@@ -54,7 +54,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.tag = (indexPath as NSIndexPath).row
         cell.cartTitle.text = self.cartList[indexPath.row].title
         cell.cartCount.text = "数量:\(self.cartList[indexPath.row].count)個"
-        cell.cartValue.text = "¥\(self.cartList[indexPath.row].value * self.cartList[indexPath.row].count)(税別)"
+        cell.cartValue.text = "¥\(self.cartList[indexPath.row].value)(税込)"
         cell.cartImage.downloadedFrom(link: self.cartList[indexPath.row].image)
         cell.delegate = self   
         return cell
@@ -64,20 +64,22 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.cartList.remove(at: tag)
         if self.cartList.count == 0 {
             self.cartTableView.isHidden = true
-//            self.footerView.isHidden = true
             UserData.cartList.removeAll()
         } else {
             let cartListNSData = NSKeyedArchiver.archivedData(withRootObject: self.cartList)
             UserData.cartList = cartListNSData
             self.cartTableView.reloadData()
         }
-        self.productCount.text = "合計 \(self.cartList.count) 店"
-        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税別)"
+        self.productCount.text = "合計 \(self.cartList.count) 点"
+        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税込)"
     }
     
     @IBAction func didTapButton(_ sender: Any) {
         if UserData.email == nil || UserData.address == nil {
-            self.showAlert(message: "「メールアドレス」と「お届け先」が登録されていることを確認してください。設定画面に移動しますか？")
+            self.showAlert(nil, message: "「メールアドレス」と「お届け先」が登録されていることを確認してください。設定画面に移動しますか？", defaultHandler: { _ in
+                self.performSegue(withIdentifier: "toSetting", sender: nil)
+            })
+            
         } else if self.cartList.count == 0 {
             self.showAlert(message: "カートに商品がありません。")
         } else {

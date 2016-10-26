@@ -21,12 +21,12 @@ class UserInfoViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.name.text = UserData.name
-        self.nameKatakana.text = UserData.nameKata
-        self.postNumber.text = UserData.postNumber
-        self.address.text = UserData.address
-        self.tel.text = UserData.tel
-        self.email.text = UserData.email
+        self.name.text = UserData.name == nil ? "未登録" : UserData.name
+        self.nameKatakana.text = UserData.nameKata == nil ? "未登録" : UserData.nameKata
+        self.postNumber.text = UserData.postNumber == nil ? "未登録" : UserData.postNumber
+        self.address.text = UserData.address == nil ? "未登録" : UserData.address
+        self.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
+        self.email.text = UserData.email == nil ? "未登録" : UserData.email
     }
     
     override func didReceiveMemoryWarning() {

@@ -56,10 +56,30 @@ class OrderConfirmationViewController: UIViewController {
     let apimanager = APIManager()
     let cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
 
+    @IBOutlet weak var subTotal: UILabel!
+    @IBOutlet weak var charge: UILabel!
+    @IBOutlet weak var total: UILabel!
+    
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var tel: UILabel!
+    @IBOutlet weak var mail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let g = cartList.map {
+        let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
+        let charge = totalValue > 6000 ? 0 : 800
+        
+        self.subTotal.text = "¥\(totalValue)"
+        self.charge.text = "¥\(charge)"
+        self.total.text = "¥\(totalValue + charge)"
+        self.name.text = UserData.name == nil ? "未登録" : UserData.name
+        self.address.text = UserData.address == nil ? "未登録" : UserData.address
+        self.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
+        self.mail.text = UserData.email == nil ? "未登録" : UserData.email
+        
+        let item = cartList.map {
             [
                 "JanCode": $0.id,
                 "ImageUrl": $0.image,
@@ -80,14 +100,11 @@ class OrderConfirmationViewController: UIViewController {
             ],
             "item_info": [
                 "OrderNumber": "String(注文番号) 乱数７桁でOK",
-                "SumValue": 1000,
-                "Postage": 1000,
-                "OrderItem": g
+                "SumValue": totalValue,
+                "Postage": charge,
+                "OrderItem": item
             ]
         ]
-        
-        
-   
     }
     
     @IBAction func sendOrderRequest(_ sender: AnyObject) {
@@ -111,7 +128,9 @@ class OrderConfirmationViewController: UIViewController {
         }
         UserData.shoppingList = NSKeyedArchiver.archivedData(withRootObject: shppingList)
         UserData.cartList.removeAll()
-        _ = navigationController?.popToRootViewController(animated: true)
+        self.showAlert("注文確定", message: "ご注文を承りました。注文内容確認メールが自動的に送信されます。ご登録されたメールをご確認ください。", defaultHandler: { _ in
+            _ = self.navigationController?.popToRootViewController(animated: true)
+        })
     }
 }
 

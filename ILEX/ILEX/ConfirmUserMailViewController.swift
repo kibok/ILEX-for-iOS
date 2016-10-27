@@ -28,7 +28,6 @@ class ConfirmUserMailViewController: UIViewController {
         let parameters: Parameters = ["to":self.userMailTextField.text!, "password":self.setPassword()]
         self.apiManager.getMailCertification(parameters: parameters)
         performSegue(withIdentifier: "toCheckPasswordVC", sender: nil)
-
     }
     
     func checkMailValidation() -> Bool {
@@ -40,9 +39,7 @@ class ConfirmUserMailViewController: UIViewController {
     
     func setPassword() -> String {
         let letters : NSString = "0123456789"
-        
         let randomString : NSMutableString = NSMutableString(capacity: 4)
-        
         for _ in 0 ..< 4 {
             let length = UInt32 (letters.length)
             let rand = arc4random_uniform(length)

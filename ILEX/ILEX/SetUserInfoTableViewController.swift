@@ -42,7 +42,7 @@ class SetUserInfoTableViewController: UITableViewController {
     @IBAction func setUserInfo(_ sender: Any) {
         
         UserData.name = "\(self.seiKanji.text!) \(self.nameKanji.text!)"
-        UserData.name = "\(self.seiKata.text!) \(self.nameKata.text!)"
+        UserData.nameKata = "\(self.seiKata.text!) \(self.nameKata.text!)"
         UserData.address = "\(self.hu.text!)\(self.city.text!)\(self.address.text!)\(self.buildName.text!)\(self.number.text!)"
         UserData.postNumber = "\(self.postNumber.text!)"
         UserData.tel = "\(self.tel.text!)"

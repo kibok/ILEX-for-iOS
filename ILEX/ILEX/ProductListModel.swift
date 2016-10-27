@@ -58,7 +58,6 @@ class ProductViewModel {
     }
     
     class var products: [Product?] {
-        print(self.productCache)
         return self.productCache
     }
 }

@@ -37,17 +37,14 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
         self.itemImage.downloadedFrom(link: self.list[0].image)
         self.selectedSize = self.list[0].size
         self.title = self.list[0].title
-        self.productValue.text = "¥\(self.list[0].value)(税別)"
+        self.productValue.text = "¥\(self.list[0].value)(税込)"
         self.productTitle.text = self.list[0].title
         self.productDescription.text = self.list[0].description
-        self.pickerTextField.text = self.list[0].size
+//        self.pickerTextField.text = self.list[0].size
+        self.pickerTextField.text = "サイズを変更"
         
         pickerView.delegate = self
         self.pickerTextField.inputView = pickerView
-        
-//        let notification = NotificationCenter.default
-//        notification.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//        notification.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,17 +69,19 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
         
         if UserData.cartList.count == 0 {
             cartList.append(cartProductModel)
+            self.showAlert(message: "カートに追加しました。")
         } else {
             let cartListNSData = UserData.cartList
             cartList = NSKeyedUnarchiver.unarchiveObject(with: cartListNSData) as! [CartProductModel]
             if checkCarList(cartList: cartList, cartProductModel: cartProductModel) {
                 cartList.append(cartProductModel)
+                self.showAlert(message: "カートに追加しました。")
             } else {
-                let index = findIndex(cartList: cartList, cartProductModel: cartProductModel)
-                cartList[index] = cartProductModel
+//                let index = findIndex(cartList: cartList, cartProductModel: cartProductModel)
+//                cartList[index] = cartProductModel
+                self.showAlert(message: "すでにカートに追加されている商品です。")
             }
         }
-        self.showAlert(message: "カートに追加しました。")
         let cartListNSData = NSKeyedArchiver.archivedData(withRootObject: cartList)
         UserData.cartList = cartListNSData
     }
@@ -114,14 +113,14 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.list[row].size
+        return self.list[row].title
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(list[row])
         self.selectedSize = self.list[row].size
-        self.pickerTextField.text = self.list[row].size
+        self.productTitle.text = self.list[row].title
         self.title = self.list[row].title
+        self.productValue.text = "¥\(self.list[row].value)(税込)"
         self.itemImage.downloadedFrom(link: self.list[row].image)
     }
     

@@ -16,11 +16,6 @@ class OrderListDetailViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        print(self.a?.id)
-        
-        
-//        print(ProductViewModel.products)
         
     }
 

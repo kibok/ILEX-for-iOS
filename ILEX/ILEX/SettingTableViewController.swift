@@ -14,10 +14,13 @@ class SettingTableViewController: UITableViewController {
     @IBOutlet weak var addressTextField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.tintColor = UIColor.primaryColor()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.emailTextField.text = UserData.email == nil ? "未登録" : UserData.email
         self.addressTextField.text = UserData.address == nil ? "未登録" : UserData.address
-        self.navigationController?.navigationBar.tintColor = UIColor.primaryColor()
     }
     
     override func didReceiveMemoryWarning() {

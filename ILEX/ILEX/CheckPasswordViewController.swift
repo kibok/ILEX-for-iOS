@@ -34,4 +34,7 @@ class CheckPasswordViewController: UIViewController {
             self.showAlert(message: "メールの設定ができませんでした")
         }
     }
+    @IBAction func didTapErrorButton(_ sender: Any) {
+        self.showAlert(message: "1.メールアドレスをもう一度間違っていないか確認してください。\n\n2.ドメイン設定をされている場合は設定を変更してください。このアプリから送られるメールアドレスのドメインは「ilex.ac」です。")
+    }
 }

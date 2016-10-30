@@ -24,7 +24,7 @@ class APIManager {
     }    
     
     func orderRequest(parameters: Parameters){
-        Alamofire.request("http://itlife009.com/ILEX/test/test_order_mail.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
+        Alamofire.request("http://itlife009.com/ILEX//mail/order/ios.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
             response in
         }
     }

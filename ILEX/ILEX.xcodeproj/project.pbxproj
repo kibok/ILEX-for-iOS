@@ -36,6 +36,10 @@
 		21AC497B1D943A4600787942 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AC497A1D943A4600787942 /* APIManager.swift */; };
 		21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B835A91D91100600355207 /* PlusMinusButton.swift */; };
 		21B835AC1D91101C00355207 /* PlusMinusButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21B835AB1D91101C00355207 /* PlusMinusButton.xib */; };
+		21BE5BA71DC5F54900508A6C /* HowToUseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE5BA61DC5F54900508A6C /* HowToUseWebViewController.swift */; };
+		21BE5BAE1DC5FAFD00508A6C /* LicenseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE5BAD1DC5FAFD00508A6C /* LicenseWebViewController.swift */; };
+		21BE5BB01DC5FB1100508A6C /* RuleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE5BAF1DC5FB1100508A6C /* RuleWebViewController.swift */; };
+		21BE5BB31DC5FCC800508A6C /* NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BE5BB21DC5FCC800508A6C /* NSNumber.swift */; };
 		21E80D881D90DBD600E5C7E4 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21E80D861D90DBD600E5C7E4 /* Setting.storyboard */; };
 		21FDF1861DAA189D0076FD1A /* ConfirmUserMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */; };
 		21FDF1881DAA28A30076FD1A /* CheckPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FDF1871DAA28A30076FD1A /* CheckPasswordViewController.swift */; };
@@ -101,6 +105,10 @@
 		21AC497A1D943A4600787942 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		21B835A91D91100600355207 /* PlusMinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		21B835AB1D91101C00355207 /* PlusMinusButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlusMinusButton.xib; sourceTree = "<group>"; };
+		21BE5BA61DC5F54900508A6C /* HowToUseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HowToUseWebViewController.swift; path = Pods/HowToUseWebViewController.swift; sourceTree = SOURCE_ROOT; };
+		21BE5BAD1DC5FAFD00508A6C /* LicenseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseWebViewController.swift; sourceTree = "<group>"; };
+		21BE5BAF1DC5FB1100508A6C /* RuleWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleWebViewController.swift; sourceTree = "<group>"; };
+		21BE5BB21DC5FCC800508A6C /* NSNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumber.swift; sourceTree = "<group>"; };
 		21E80D871D90DBD600E5C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
 		21F5A1741DACDCB200365C9E /* ILEX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ILEX.entitlements; sourceTree = "<group>"; };
 		21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmUserMailViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +264,8 @@
 				21FDF1851DAA189D0076FD1A /* ConfirmUserMailViewController.swift */,
 				21A3E7571DAD21C100171DED /* OrderListViewController.swift */,
 				211AC0B01DB3E329007A2444 /* OrderListDetailViewController.swift */,
+				21BE5BAD1DC5FAFD00508A6C /* LicenseWebViewController.swift */,
+				21BE5BAF1DC5FB1100508A6C /* RuleWebViewController.swift */,
 				21A3E7501DACF5AE00171DED /* SetUserInfoTableViewController.swift */,
 				C46FE2C21D9030F5009B6EF8 /* SettingTableViewController.swift */,
 				21FDF1891DAA2AE50076FD1A /* UserInfoViewController.swift */,
@@ -267,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				21419CF01D8B8F9500A282D8 /* CartViewController.swift */,
+				21BE5BA61DC5F54900508A6C /* HowToUseWebViewController.swift */,
 				21419CF21D8B8FAF00A282D8 /* OrderConfirmationViewController.swift */,
 				21419CEE1D8B8F7E00A282D8 /* ProductDetailViewController.swift */,
 				21419CB81D8B805600A282D8 /* ProductSelectController.swift */,
@@ -295,6 +306,7 @@
 				216E305E1DA5EADC000B5410 /* StringExtension.swift */,
 				21A3E7531DAD0E9800171DED /* UIColorExtension.swift */,
 				21A3E7551DAD1C4900171DED /* UIViewControllerExtension.swift */,
+				21BE5BB21DC5FCC800508A6C /* NSNumber.swift */,
 				2144435E1D94FFDD00E302BF /* UIImageViewExtension.swift */,
 			);
 			name = Extensions;
@@ -346,12 +358,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21419CDE1D8B805600A282D8 /* Build configuration list for PBXNativeTarget "ILEXTests" */;
 			buildPhases = (
-				C25827E40E8E00590E6904F7 /* [CP] Check Pods Manifest.lock */,
 				21419CC31D8B805600A282D8 /* Sources */,
 				21419CC41D8B805600A282D8 /* Frameworks */,
 				21419CC51D8B805600A282D8 /* Resources */,
-				3C091B6DEB11C6EBB07F4ABF /* [CP] Embed Pods Frameworks */,
-				FBE90305E3E58D2384EE68AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,11 +376,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21419CE11D8B805600A282D8 /* Build configuration list for PBXNativeTarget "ILEXUITests" */;
 			buildPhases = (
-				19A892C7DB328B7CE671A14B /* [CP] Check Pods Manifest.lock */,
 				21419CCE1D8B805600A282D8 /* Sources */,
 				21419CCF1D8B805600A282D8 /* Frameworks */,
 				21419CD01D8B805600A282D8 /* Resources */,
-				0138F86108FA5F3B66AF44DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,36 +475,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0138F86108FA5F3B66AF44DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEXUITests/Pods-ILEXUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		19A892C7DB328B7CE671A14B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		27B9DD9A7F7FB485B15625D9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -513,21 +490,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEX/Pods-ILEX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C091B6DEB11C6EBB07F4ABF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEXTests/Pods-ILEXTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4B19069048C57F574D0426A2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -540,22 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C25827E40E8E00590E6904F7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C41E79827C455002A278FAAC /* [CP] Copy Pods Resources */ = {
@@ -573,21 +520,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEX/Pods-ILEX-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FBE90305E3E58D2384EE68AC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ILEXTests/Pods-ILEXTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -599,6 +531,7 @@
 				21FDF1881DAA28A30076FD1A /* CheckPasswordViewController.swift in Sources */,
 				21970FCF1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift in Sources */,
 				21A3E7511DACF5AE00171DED /* SetUserInfoTableViewController.swift in Sources */,
+				21BE5BB01DC5FB1100508A6C /* RuleWebViewController.swift in Sources */,
 				215781D71DA48C4D00583316 /* UserData.swift in Sources */,
 				216F90B91D90FE4E00874943 /* ProductListModel.swift in Sources */,
 				C46FE2C31D9030F5009B6EF8 /* SettingTableViewController.swift in Sources */,
@@ -607,6 +540,7 @@
 				21A3E7561DAD1C4900171DED /* UIViewControllerExtension.swift in Sources */,
 				21419CF31D8B8FAF00A282D8 /* OrderConfirmationViewController.swift in Sources */,
 				21419CF11D8B8F9500A282D8 /* CartViewController.swift in Sources */,
+				21BE5BB31DC5FCC800508A6C /* NSNumber.swift in Sources */,
 				21FDF1861DAA189D0076FD1A /* ConfirmUserMailViewController.swift in Sources */,
 				21419CF71D8BE1B700A282D8 /* ProductTableViewCell.swift in Sources */,
 				216E305F1DA5EADC000B5410 /* StringExtension.swift in Sources */,
@@ -618,7 +552,9 @@
 				21B835AA1D91100600355207 /* PlusMinusButton.swift in Sources */,
 				21FDF18A1DAA2AE50076FD1A /* UserInfoViewController.swift in Sources */,
 				211AC0B11DB3E329007A2444 /* OrderListDetailViewController.swift in Sources */,
+				21BE5BA71DC5F54900508A6C /* HowToUseWebViewController.swift in Sources */,
 				21A3E7541DAD0E9800171DED /* UIColorExtension.swift in Sources */,
+				21BE5BAE1DC5FAFD00508A6C /* LicenseWebViewController.swift in Sources */,
 				2144435F1D94FFDD00E302BF /* UIImageViewExtension.swift in Sources */,
 				21419CF91D8BE1CF00A282D8 /* CartTableViewCell.swift in Sources */,
 			);

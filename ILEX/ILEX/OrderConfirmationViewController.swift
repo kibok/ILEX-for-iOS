@@ -69,11 +69,11 @@ class OrderConfirmationViewController: UIViewController {
         super.viewDidLoad()
         
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
-        let charge = totalValue > 6000 ? 0 : 800
+        let charge = totalValue >= 6000 ? 0 : 800
         
-        self.subTotal.text = "¥\(totalValue)"
-        self.charge.text = "¥\(charge)"
-        self.total.text = "¥\(totalValue + charge)"
+        self.subTotal.text = "\(NSNumber(value: totalValue).priceString())"
+        self.charge.text = "\(NSNumber(value: charge).priceString())"
+        self.total.text = "\(NSNumber(value: totalValue + charge).priceString())"
         self.name.text = UserData.name == nil ? "未登録" : UserData.name
         self.address.text = UserData.address == nil ? "未登録" : UserData.address
         self.tel.text = UserData.tel == nil ? "未登録" : UserData.tel

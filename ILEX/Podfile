@@ -9,4 +9,5 @@ target 'ILEX' do
      pod 'Alamofire', '~> 4.0'
      pod 'SwiftyUserDefaults'
      pod 'KeychainAccess'
+     pod 'SDWebImage/WebP'
 end

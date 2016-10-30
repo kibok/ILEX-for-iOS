@@ -8,12 +8,15 @@
 
 import UIKit
 import Alamofire
+import SDWebImage
 
 class ProductSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var productTalbeView: UITableView!
     var viewModel: ProductListModel?
+    var list: [Product] = []
     let apiManager = APIManager()
+    var refreshControl:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,10 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         self.getItemLsit()
         
         ProductViewModel.loadProducts()
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: #selector(ProductSelectViewController.refresh), for: .valueChanged)
+        self.productTalbeView.addSubview(refreshControl)
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,47 +50,39 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = self.viewModel?.products?.count else { return 0 }
-        return count
+        
+        guard let item = self.viewModel else { return 0 }
+        let a = item.products?.filter{ $0.visibleCode == 1 }
+        print(a!.count)
+        return a!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as! ProductTableViewCell
-                
-        guard let item = self.viewModel else { return cell }
-        let itemIndexRow = item.products?[indexPath.row]
-
-        if itemIndexRow?.visibleCode == 1 {
-            
-            let url = URL(string: (itemIndexRow?.image)!)
-            
-//            cell.itemImage?.downloadedFrom(url: url!)
-
-            cell.itemImage.downloadedFrom(url: url!, contentMode: UIViewContentMode.scaleAspectFit)
-            cell.itemDescription.text = itemIndexRow?.description
-            cell.itemTitle.text = itemIndexRow?.title
-            cell.itemValue.text = "¥\(itemIndexRow!.value)円"
-        }
+        
+        let url = URL(string: self.list[indexPath.row].image)
+        cell.itemImage.sd_setImage(with: url)
+        cell.itemDescription.text = self.list[indexPath.row].description
+        cell.itemTitle.text = self.list[indexPath.row].title
+        cell.itemValue.text = "\(NSNumber(value: self.list[indexPath.row].value).priceString())円"
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toProductDetailViewController", sender: nil)
-        
         tableView.deselectRow(at: indexPath, animated: true)
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toProductDetailViewController") {
             let vc = (segue.destination as? ProductDetailViewController)!
             guard let row = self.productTalbeView.indexPathForSelectedRow?.row else { return }
-            vc.viewModel = self.viewModel?.products?[row]
-            let size = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
+            vc.viewModel = self.list[row]
+            let size = self.viewModel?.products?.filter{ $0.productNumber == self.list[row].productNumber }
                 .map { $0.size }
             vc.size = size
-            
-            vc.list = self.viewModel?.products?.filter{ $0.productNumber == self.viewModel?.products?[row].productNumber }
+            vc.list = self.viewModel?.products?.filter{ $0.productNumber == self.list[row].productNumber }
         }
     }
     
@@ -92,8 +91,16 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     func getItemLsit(){
         self.apiManager.getItemList(completionHandler: { item in
             self.viewModel = ProductListModel(item: item)
+            self.list = (self.viewModel?.products?.filter { $0.visibleCode == 1 })!
             self.productTalbeView.reloadData()
         })
     }
-}
+    
+    // MARK: - RefreshControll
 
+    func refresh()
+    {
+        self.productTalbeView.reloadData()
+        refreshControl.endRefreshing()
+    }
+}

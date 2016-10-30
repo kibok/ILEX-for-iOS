@@ -35,8 +35,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
             self.cartTableView.reloadData()
         }
-        self.productCount.text = "合計\(self.cartList.count)点"
-        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税込)"
+        
+        self.productCount.text = "合計\(NSNumber(value: self.cartList.count).priceString())点"
+        let price = NSNumber(value: self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }).priceString()
+        self.totalPrice.text = "合計金額 \(price)(税込)"
     }
     
     // MARK: - Table view data source
@@ -54,7 +56,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.tag = (indexPath as NSIndexPath).row
         cell.cartTitle.text = self.cartList[indexPath.row].title
         cell.cartCount.text = "数量:\(self.cartList[indexPath.row].count)個"
-        cell.cartValue.text = "¥\(self.cartList[indexPath.row].value)(税込)"
+        cell.cartValue.text = "\(NSNumber(value: self.cartList[indexPath.row].value).priceString())(税込)"
         cell.cartImage.downloadedFrom(link: self.cartList[indexPath.row].image)
         cell.delegate = self   
         return cell
@@ -71,7 +73,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.cartTableView.reloadData()
         }
         self.productCount.text = "合計 \(self.cartList.count) 点"
-        self.totalPrice.text = "合計金額 ¥ \(self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 })(税込)"
+        let price = NSNumber(value: self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }).priceString()
+        self.totalPrice.text = "合計金額 \(price)(税込)"
     }
     
     @IBAction func didTapButton(_ sender: Any) {

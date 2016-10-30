@@ -151,6 +151,9 @@
                                                 <constraint firstItem="YAh-x4-c88" firstAttribute="centerY" secondItem="n6m-Lz-imJ" secondAttribute="centerY" id="lHi-Ip-wPZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Wv6-Bp-wce" kind="show" id="KdU-oV-b0W"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jLb-RZ-LXe">
                                         <rect key="frame" x="0.0" y="479" width="414" height="44"/>
@@ -172,12 +175,15 @@
                                                 <constraint firstAttribute="trailing" secondItem="3mu-lH-L4u" secondAttribute="trailing" constant="15" id="oGG-ud-Per"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="OPr-Sv-M78" kind="show" id="7sS-Ef-Mdu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="バージョン" id="vx0-XT-eKl">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XYf-Oa-JSf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XYf-Oa-JSf">
                                         <rect key="frame" x="0.0" y="579" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XYf-Oa-JSf" id="hiS-ei-Fth">
@@ -548,6 +554,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9T0-cG-y8J">
                                 <rect key="frame" x="145.66666666666669" y="315" width="123.00000000000006" height="30"/>
                                 <state key="normal" title="メールが届かない"/>
+                                <connections>
+                                    <action selector="didTapErrorButton:" destination="ehP-yo-Okg" eventType="touchUpInside" id="a6D-eT-vvA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -726,6 +735,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qn-g1-nig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="366.66666666666669" y="565.76086956521749"/>
+        </scene>
+        <!--License Web View Controller-->
+        <scene sceneID="doc-33-yqx">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="OPr-Sv-M78" customClass="LicenseWebViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eOj-0l-9ye"/>
+                        <viewControllerLayoutGuide type="bottom" id="1L0-m4-QJS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hOY-2I-uZK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCx-lq-4UZ">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VCx-lq-4UZ" firstAttribute="leading" secondItem="hOY-2I-uZK" secondAttribute="leading" id="GpJ-sT-sxM"/>
+                            <constraint firstItem="VCx-lq-4UZ" firstAttribute="top" secondItem="eOj-0l-9ye" secondAttribute="bottom" id="L4K-C5-Pku"/>
+                            <constraint firstAttribute="trailing" secondItem="VCx-lq-4UZ" secondAttribute="trailing" id="N5h-Bm-8Ux"/>
+                            <constraint firstItem="1L0-m4-QJS" firstAttribute="top" secondItem="VCx-lq-4UZ" secondAttribute="bottom" id="PSt-xJ-lNk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="VCx-lq-4UZ" id="yy4-GW-54n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Uj-nE-9Ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1335" y="476"/>
         </scene>
         <!--Title-->
         <scene sceneID="7aj-ba-Xdu">
@@ -1135,6 +1177,39 @@
             </objects>
             <point key="canvasLocation" x="1348" y="-200"/>
         </scene>
+        <!--Rule Web View Controller-->
+        <scene sceneID="V4a-iA-w2x">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Wv6-Bp-wce" customClass="RuleWebViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k3m-Mf-suZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="JHj-aV-5ug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DlA-0P-F7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-zT-daz">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xBB-zT-daz" secondAttribute="trailing" id="4OX-8F-4Tf"/>
+                            <constraint firstItem="xBB-zT-daz" firstAttribute="top" secondItem="k3m-Mf-suZ" secondAttribute="bottom" id="BPF-oP-RXt"/>
+                            <constraint firstItem="xBB-zT-daz" firstAttribute="leading" secondItem="DlA-0P-F7Q" secondAttribute="leading" id="Ejx-XJ-KWP"/>
+                            <constraint firstItem="JHj-aV-5ug" firstAttribute="top" secondItem="xBB-zT-daz" secondAttribute="bottom" id="MJY-Ku-GeU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="xBB-zT-daz" id="Laf-a4-S2J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4P-j8-rjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218" y="-195"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rKJ-3I-vPs">
             <objects>
@@ -1152,50 +1227,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgC-Fq-aih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-506" y="-969"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="BSA-Dg-O92">
-            <objects>
-                <viewController id="nha-gT-u2h" customClass="OrderListViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3QB-35-MuJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="UUc-j2-9Wi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rc6-q7-ueO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="2" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="24X-Lp-hof">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" rowHeight="2" id="gpe-an-gPF">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="2"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gpe-an-gPF" id="7m6-oB-1iY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="24X-Lp-hof" secondAttribute="trailing" id="I9Q-he-BNO"/>
-                            <constraint firstItem="24X-Lp-hof" firstAttribute="leading" secondItem="Rc6-q7-ueO" secondAttribute="leading" id="UbJ-VC-f4R"/>
-                            <constraint firstItem="24X-Lp-hof" firstAttribute="top" secondItem="3QB-35-MuJ" secondAttribute="bottom" id="XXy-DG-cq4"/>
-                            <constraint firstItem="UUc-j2-9Wi" firstAttribute="top" secondItem="24X-Lp-hof" secondAttribute="bottom" id="trq-Kj-tcz"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="rLC-5K-em7"/>
-                    <connections>
-                        <outlet property="tableView" destination="24X-Lp-hof" id="iJG-QH-RVt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pv6-mV-eQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-401" y="-151"/>
         </scene>
     </scenes>
 </document>

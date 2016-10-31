@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let apiManager = APIManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.getVersion()
+        
         return true
     }
 
@@ -41,6 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func getVersion(){
+        self.apiManager.getVersion(completionHandler: { item in
+            guard let versionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
+            
+            if versionName != item["Version"]! {
+                
+            }
+        })
+    }
 }
 

@@ -46,10 +46,6 @@ struct OrderItems {
     }
 }
 
-//let params = [
-//    "emps": emps.map{e in e.toDictionary()}
-//]
-
 class OrderConfirmationViewController: UIViewController {
     
     var parameters: Parameters = [:]
@@ -59,7 +55,6 @@ class OrderConfirmationViewController: UIViewController {
     @IBOutlet weak var subTotal: UILabel!
     @IBOutlet weak var charge: UILabel!
     @IBOutlet weak var total: UILabel!
-    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var tel: UILabel!
@@ -99,7 +94,7 @@ class OrderConfirmationViewController: UIViewController {
                 "Tell": UserData.tel
             ],
             "item_info": [
-                "OrderNumber": "String(注文番号) 乱数７桁でOK",
+                "OrderNumber": setOrderNumber(),
                 "SumValue": totalValue,
                 "Postage": charge,
                 "OrderItem": item
@@ -131,6 +126,17 @@ class OrderConfirmationViewController: UIViewController {
         self.showAlert("注文確定", message: "ご注文を承りました。注文内容確認メールが自動的に送信されます。ご登録されたメールをご確認ください。", defaultHandler: { _ in
             _ = self.navigationController?.popToRootViewController(animated: true)
         })
+    }
+    
+    func setOrderNumber() -> String {
+        let letters : NSString = "0123456789"
+        let randomString : NSMutableString = NSMutableString(capacity: 4)
+        for _ in 0 ..< 7 {
+            let length = UInt32 (letters.length)
+            let rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.character(at: Int(rand)))
+        }
+        return randomString as String
     }
 }
 

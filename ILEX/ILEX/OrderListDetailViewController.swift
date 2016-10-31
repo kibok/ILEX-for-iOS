@@ -47,9 +47,8 @@ class OrderListDetailViewController: UIViewController, UITableViewDelegate, UITa
         
         imageView.downloadedFrom(link: (list[0]?.image)!)
         label1.text = list[0]?.title
-        label2.text = "\(list[0]!.value)"
-        label3.text = "\(self.shoppingListModel.count[indexPath.row])"
-        
+        label2.text = "\(NSNumber(value: list[0]!.value).priceString())"
+        label3.text = "\(self.shoppingListModel.count[indexPath.row])個"
         return cell
     }
     

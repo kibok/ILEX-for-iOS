@@ -12,9 +12,14 @@ class SettingTableViewController: UITableViewController {
 
     @IBOutlet weak var emailTextField: UILabel!
     @IBOutlet weak var addressTextField: UILabel!
+    @IBOutlet weak var versionTextLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.primaryColor()
+        if let versionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            self.versionTextLabel.text = versionName
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

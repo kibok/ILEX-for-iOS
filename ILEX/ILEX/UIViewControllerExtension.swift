@@ -16,7 +16,7 @@ extension UIViewController {
         alertController.addAction(defaultAction)
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: cancelHandler)
         alertController.addAction(cancelAction)
-//        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func showAlert(message: String?) {

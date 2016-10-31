@@ -51,6 +51,7 @@ class OrderConfirmationViewController: UIViewController {
     var parameters: Parameters = [:]
     let apimanager = APIManager()
     let cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
+    var orderNumber: String?
 
     @IBOutlet weak var subTotal: UILabel!
     @IBOutlet weak var charge: UILabel!
@@ -73,6 +74,7 @@ class OrderConfirmationViewController: UIViewController {
         self.address.text = UserData.address == nil ? "未登録" : UserData.address
         self.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
         self.mail.text = UserData.email == nil ? "未登録" : UserData.email
+        self.orderNumber = setOrderNumber()
         
         let item = cartList.map {
             [
@@ -94,7 +96,7 @@ class OrderConfirmationViewController: UIViewController {
                 "Tell": UserData.tel
             ],
             "item_info": [
-                "OrderNumber": setOrderNumber(),
+                "OrderNumber": self.orderNumber!,
                 "SumValue": totalValue,
                 "Postage": charge,
                 "OrderItem": item
@@ -111,7 +113,7 @@ class OrderConfirmationViewController: UIViewController {
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
         let today = "\(Date())"
 
-        let list = ShoppingListModel(date: today, id: id, count: count, totalValue: totalValue)
+        let list = ShoppingListModel(date: today, id: id, count: count, totalValue: totalValue, orderNumber: self.orderNumber!)
         var shppingList: [ShoppingListModel] = []
         
         if UserData.shoppingList.count == 0 {

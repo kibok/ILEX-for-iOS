@@ -49,8 +49,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.apiManager.getVersion(completionHandler: { item in
             guard let versionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
             
-            if versionName != item["Version"]! {
-                
+            if versionName != String(describing: item["Version"]!) {
+                let window: UIWindow = UIWindow(frame: UIScreen.main.bounds)
+                window.rootViewController = UIViewController()
+                let alert: UIAlertController =  UIAlertController(title: "アプリの最新版があります", message: String(describing: item["Message"]!), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(action: UIAlertAction) -> Void in
+                    UIApplication.shared.openURL(NSURL(string: "https://itunes.apple.com/jp/app/doragonkuesutomonsutazu-suparaito/id710247888?mt=8")! as URL)
+                    window.isHidden = true
+                }))
+                window.makeKeyAndVisible()
+                window.rootViewController?.present(alert, animated: true, completion: { _ in })
             }
         })
     }

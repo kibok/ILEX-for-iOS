@@ -46,20 +46,16 @@ struct OrderItems {
     }
 }
 
-//let params = [
-//    "emps": emps.map{e in e.toDictionary()}
-//]
-
 class OrderConfirmationViewController: UIViewController {
     
     var parameters: Parameters = [:]
     let apimanager = APIManager()
     let cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
+    var orderNumber: String?
 
     @IBOutlet weak var subTotal: UILabel!
     @IBOutlet weak var charge: UILabel!
     @IBOutlet weak var total: UILabel!
-    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var tel: UILabel!
@@ -78,6 +74,7 @@ class OrderConfirmationViewController: UIViewController {
         self.address.text = UserData.address == nil ? "未登録" : UserData.address
         self.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
         self.mail.text = UserData.email == nil ? "未登録" : UserData.email
+        self.orderNumber = setOrderNumber()
         
         let item = cartList.map {
             [
@@ -99,7 +96,7 @@ class OrderConfirmationViewController: UIViewController {
                 "Tell": UserData.tel
             ],
             "item_info": [
-                "OrderNumber": "String(注文番号) 乱数７桁でOK",
+                "OrderNumber": self.orderNumber!,
                 "SumValue": totalValue,
                 "Postage": charge,
                 "OrderItem": item
@@ -116,7 +113,7 @@ class OrderConfirmationViewController: UIViewController {
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
         let today = "\(Date())"
 
-        let list = ShoppingListModel(date: today, id: id, count: count, totalValue: totalValue)
+        let list = ShoppingListModel(date: today, id: id, count: count, totalValue: totalValue, orderNumber: self.orderNumber!)
         var shppingList: [ShoppingListModel] = []
         
         if UserData.shoppingList.count == 0 {
@@ -131,6 +128,17 @@ class OrderConfirmationViewController: UIViewController {
         self.showAlert("注文確定", message: "ご注文を承りました。注文内容確認メールが自動的に送信されます。ご登録されたメールをご確認ください。", defaultHandler: { _ in
             _ = self.navigationController?.popToRootViewController(animated: true)
         })
+    }
+    
+    func setOrderNumber() -> String {
+        let letters : NSString = "0123456789"
+        let randomString : NSMutableString = NSMutableString(capacity: 4)
+        for _ in 0 ..< 7 {
+            let length = UInt32 (letters.length)
+            let rand = arc4random_uniform(length)
+            randomString.appendFormat("%C", letters.character(at: Int(rand)))
+        }
+        return randomString as String
     }
 }
 

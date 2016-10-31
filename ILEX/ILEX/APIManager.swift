@@ -35,5 +35,14 @@ class APIManager {
         }
     }
     
-    
+    func getVersion(completionHandler: @escaping (NSDictionary) -> Void) {
+        Alamofire.request("http://itlife009.com/ILEX/config/state.json").responseJSON { response in
+            if response.result.isSuccess {
+                let json = response.result.value
+                let jsonDic = json as! NSDictionary
+                let item = jsonDic.object(forKey: "iOS") as! NSDictionary
+                completionHandler(item)
+            }
+        }
+    }
 }

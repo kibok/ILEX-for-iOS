@@ -24,6 +24,15 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         self.productTalbeView.delegate = self
         self.productTalbeView.dataSource = self
         
+        if !UserData.didLoginAtFirstTime {
+            self.showFirstAlert(title: "アプリをインストールしていただきありがとうございます。当社はお客様のパートナーに最適な商品を提供しています。是非お試しください。\nまず最初に利用規約をご一読ください。", message: nil, defaultHandler: { _ in
+                let storyboard = UIStoryboard(name: "Setting", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "RuleWebViewController")
+                self.navigationController?.pushViewController(vc, animated: true)
+                UserData.didLoginAtFirstTime = true
+            }, cancelHandler: nil)
+        }
+        
         let nib = UINib(nibName: "ProductTableViewCell", bundle: nil)
         self.productTalbeView.register(nib, forCellReuseIdentifier: "ProductTableViewCell")
         self.productTalbeView.tableHeaderView = nil
@@ -102,5 +111,14 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     {
         self.productTalbeView.reloadData()
         refreshControl.endRefreshing()
+    }
+    
+    func showFirstAlert(title: String?, message: String?, defaultHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "利用規約へ", style: .default, handler: defaultHandler)
+        alertController.addAction(defaultAction)
+        let cancelAction = UIAlertAction(title: "後で見る", style: .cancel, handler: cancelHandler)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

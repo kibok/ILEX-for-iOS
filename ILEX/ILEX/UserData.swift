@@ -13,6 +13,7 @@ import KeychainAccess
 extension DefaultsKeys {
     static let cartList = DefaultsKey<Data>("cartList")
     static let shoppingList = DefaultsKey<Data>("shoppingList")
+    static let didLoginAtFirstTime = DefaultsKey<Bool>("didLoginAtFirstTime")
 }
 
 class UserData {
@@ -87,6 +88,15 @@ class UserData {
         }
         get {
             return Defaults[.shoppingList]
+        }
+    }
+    
+    class var didLoginAtFirstTime: Bool {
+        set {
+            Defaults[.didLoginAtFirstTime] = newValue
+        }
+        get {
+            return Defaults[.didLoginAtFirstTime]
         }
     }
 }

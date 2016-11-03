@@ -111,7 +111,11 @@ class OrderConfirmationViewController: UIViewController {
         let id = self.cartList.map { $0.id }
         let count = self.cartList.map { $0.count }
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
-        let today = "\(Date())"
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        let today = formatter.string(from: date)
 
         let list = ShoppingListModel(date: today, id: id, count: count, totalValue: totalValue, orderNumber: self.orderNumber!)
         var shppingList: [ShoppingListModel] = []

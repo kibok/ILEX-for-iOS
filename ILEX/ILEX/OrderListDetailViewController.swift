@@ -43,6 +43,7 @@ class OrderListDetailViewController: UIViewController, UITableViewDelegate, UITa
         let label2 = cell.viewWithTag(2) as! UILabel
         let label3 = cell.viewWithTag(3) as! UILabel
 
+
         let list = ProductViewModel.products.filter { $0?.id == self.shoppingListModel.id[indexPath.row] }
         
         imageView.downloadedFrom(link: (list[0]?.image)!)

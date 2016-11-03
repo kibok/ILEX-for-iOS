@@ -73,7 +73,7 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         cell.itemImage.sd_setImage(with: url)
         cell.itemDescription.text = self.list[indexPath.row].description
         cell.itemTitle.text = self.list[indexPath.row].title
-        cell.itemValue.text = "\(NSNumber(value: self.list[indexPath.row].value).priceString())円"
+        cell.itemValue.text = "\(NSNumber(value: self.list[indexPath.row].value).priceString())円（税込）"
         
         return cell
     }

@@ -474,7 +474,7 @@
                                             <segue destination="dEA-rQ-7rJ" kind="show" id="sy6-MN-xQ7"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viH-LG-NWB">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viH-LG-NWB" customClass="TextFieldWithDoneButton" customModule="ILEX" customModuleProvider="target">
                                         <rect key="frame" x="15" y="326" width="384" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Feq-vg-aE7"/>

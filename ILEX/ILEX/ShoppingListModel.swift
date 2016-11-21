@@ -3,7 +3,7 @@
 //  ILEX
 //
 //  Created by 朴 基馥 on 2016/10/16.
-//  Copyright © 2016年 ILEX. All rights reserved.
+//  Copyright © 2016年 ILEX. All rights reseqrved.
 //
 
 import UIKit

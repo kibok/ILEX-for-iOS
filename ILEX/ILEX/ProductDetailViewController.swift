@@ -27,7 +27,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        self.plusMinusButton.button.maximumValue = 30
+        self.plusMinusButton.button.maximumValue = 20
         self.plusMinusButton.button.minimumValue = 1
         self.plusMinusButton.button.value = 1
         self.plusMinusButton.button.stepValue = 1

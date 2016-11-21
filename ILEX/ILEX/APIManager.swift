@@ -13,30 +13,31 @@ class APIManager {
     var viewModel: ProductListModel!
     
     func getItemList(completionHandler: @escaping (NSArray) -> Void) {
-        Alamofire.request("http://itlife009.com/ILEX/ilex_itemlist.json").responseJSON { response in
+        Alamofire.request("http://app.ilex.ac/ILEX/item/ilex_part1.json").responseJSON { response in
             if response.result.isSuccess {
                 let json = response.result.value
                 let jsonDic = json as! NSDictionary
                 let item = jsonDic.object(forKey: "Item") as! NSArray
+                print(item)
                 completionHandler(item)
             }
         }
     }    
     
     func orderRequest(parameters: Parameters){
-        Alamofire.request("http://itlife009.com/ILEX//mail/order/ios.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
+        Alamofire.request("http://app.ilex.ac/ILEX/mail/order/ios.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
             response in
         }
     }
     
     func getMailCertification(parameters: Parameters) {
-        Alamofire.request("http://itlife009.com/ILEX/mail/register/ios.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
+        Alamofire.request("http://app.ilex.ac/ILEX/mail/register/ios.php", method: .post, parameters: parameters, encoding: JSONEncoding.prettyPrinted, headers: nil).responseString {
             response in
         }
     }
     
     func getVersion(completionHandler: @escaping (NSDictionary) -> Void) {
-        Alamofire.request("http://itlife009.com/ILEX/config/state.json").responseJSON { response in
+        Alamofire.request("http://app.ilex.ac/ILEX/config/state.json").responseJSON { response in
             if response.result.isSuccess {
                 let json = response.result.value
                 let jsonDic = json as! NSDictionary

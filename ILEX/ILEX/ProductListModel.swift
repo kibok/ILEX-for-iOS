@@ -15,6 +15,8 @@ struct Product {
     let image: String
     let visibleCode: Int
     let description: String
+    let usage: String
+    let concept: String
     let size: String
     let productNumber: String
 }
@@ -34,11 +36,13 @@ struct ProductListModel {
                 let title = nsItem.object(forKey: "Title") as! String
                 let value = nsItem.object(forKey: "Value") as! Int
                 let image = nsItem.object(forKey: "Image") as! String
+                let usage = nsItem.object(forKey: "Usage") as! String
+                let concept = nsItem.object(forKey: "Concept") as! String
                 let description = nsItem.object(forKey: "Description") as! String
                 let size = id.components(separatedBy: "-").last!
                 let productNumber = id.components(separatedBy: "-")[2]
                                 
-                array.append(Product(id: id, title: title, value: value, image: image, visibleCode: visibleCode, description: description, size: size, productNumber: productNumber))
+                array.append(Product(id: id, title: title, value: value, image: image, visibleCode: visibleCode, description: description, usage: usage, concept: concept, size: size, productNumber: productNumber))
             }
         }
         self.products = array

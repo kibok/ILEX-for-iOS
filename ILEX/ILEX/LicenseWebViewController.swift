@@ -11,7 +11,7 @@ import UIKit
 class LicenseWebViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
-    var targetURL = "http://itlife009.com/ILEX/license/ios.html"
+    var targetURL = "http://app.ilex.ac/ILEX/license/ios.html"
     
     
     override func viewDidLoad() {

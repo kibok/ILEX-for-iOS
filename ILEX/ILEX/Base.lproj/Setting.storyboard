@@ -460,43 +460,16 @@
                                     <action selector="requestConfirmUserMail:" destination="I7u-OG-Iu7" eventType="touchUpInside" id="ph5-ZG-lgX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このメールアドレスはお客様が商品を注文した際に、注文を確認を確認するために使用します。当社以外の第三者には開示いたしません。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NW2-aR-Agi">
-                                <rect key="frame" x="35" y="274.66666666666669" width="344" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アプリをアンインストールしますと、自動的に登録した情報は削除されます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-LH-1Jr">
-                                <rect key="frame" x="35" y="338.66666666666669" width="344" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アンインストールしたにも関わらず、当社かららの配信が届く場合はメールから「配信中止」を選択し、指示にしたがってください。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-SY-MnT">
-                                <rect key="frame" x="35" y="384.66666666666669" width="344" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NW2-aR-Agi" firstAttribute="leading" secondItem="54e-Ml-hEV" secondAttribute="leadingMargin" constant="15" id="6Sc-4g-6JO"/>
-                            <constraint firstItem="NW2-aR-Agi" firstAttribute="top" secondItem="SGJ-Wy-Ju3" secondAttribute="bottom" constant="30" id="8xX-zV-4oL"/>
                             <constraint firstItem="19x-lR-g0h" firstAttribute="leading" secondItem="54e-Ml-hEV" secondAttribute="leadingMargin" id="A6t-AA-y77"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BiT-SY-MnT" secondAttribute="trailing" constant="15" id="BBA-Kl-QNN"/>
-                            <constraint firstItem="BiT-SY-MnT" firstAttribute="leading" secondItem="54e-Ml-hEV" secondAttribute="leadingMargin" constant="15" id="DXS-Kt-Zor"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aIP-LH-1Jr" secondAttribute="trailing" constant="15" id="Fga-rS-cIW"/>
-                            <constraint firstItem="aIP-LH-1Jr" firstAttribute="top" secondItem="NW2-aR-Agi" secondAttribute="bottom" constant="10" id="JUY-IK-Czo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NW2-aR-Agi" secondAttribute="trailing" constant="15" id="JtW-WU-p7B"/>
                             <constraint firstItem="SGJ-Wy-Ju3" firstAttribute="top" secondItem="Ru2-Yv-6G1" secondAttribute="bottom" constant="30" id="LcM-bQ-GNE"/>
                             <constraint firstItem="SGJ-Wy-Ju3" firstAttribute="centerX" secondItem="54e-Ml-hEV" secondAttribute="centerX" id="MZT-EP-PKT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ru2-Yv-6G1" secondAttribute="trailing" constant="15" id="SRb-At-Zja"/>
                             <constraint firstItem="Ru2-Yv-6G1" firstAttribute="leading" secondItem="54e-Ml-hEV" secondAttribute="leadingMargin" constant="15" id="Xfg-6G-GG8"/>
-                            <constraint firstItem="BiT-SY-MnT" firstAttribute="top" secondItem="aIP-LH-1Jr" secondAttribute="bottom" constant="10" id="Zfc-nV-2f1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="19x-lR-g0h" secondAttribute="trailing" id="iyO-Cg-pux"/>
                             <constraint firstItem="Ru2-Yv-6G1" firstAttribute="top" secondItem="19x-lR-g0h" secondAttribute="bottom" constant="30" id="pOD-LC-j3P"/>
-                            <constraint firstItem="aIP-LH-1Jr" firstAttribute="leading" secondItem="54e-Ml-hEV" secondAttribute="leadingMargin" constant="15" id="sAw-Xg-mvj"/>
                             <constraint firstItem="19x-lR-g0h" firstAttribute="top" secondItem="dng-aC-YzG" secondAttribute="bottom" constant="30" id="up9-cD-dy3"/>
                         </constraints>
                     </view>

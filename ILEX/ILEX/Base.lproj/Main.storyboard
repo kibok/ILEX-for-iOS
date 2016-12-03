@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="-90.400000000000006" y="-1417.2413793103449"/>
         </scene>
-        <!--Title-->
+        <!--注文確認-->
         <scene sceneID="AkC-df-1DE">
             <objects>
                 <viewController storyboardIdentifier="OrderConfirmationVC" automaticallyAdjustsScrollViewInsets="NO" id="oxC-vd-s7g" customClass="OrderConfirmationViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="526"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注文内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEP-Kz-Yku">
-                                        <rect key="frame" x="15" y="15" width="87" height="21"/>
+                                        <rect key="frame" x="15" y="15" width="337.66666666666669" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -191,7 +191,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-Cf-Hf3">
-                                        <rect key="frame" x="15" y="328" width="384" height="200"/>
+                                        <rect key="frame" x="15" y="322.66666666666663" width="384" height="199.99999999999989"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="氏名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-z8-wmA">
                                                 <rect key="frame" x="10" y="10" width="63" height="21"/>
@@ -265,33 +265,33 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ご注意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-qF-eFM">
-                                        <rect key="frame" x="15" y="543" width="87" height="21"/>
+                                        <rect key="frame" x="15" y="537.66666666666663" width="337.66666666666669" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnA-VL-OaZ">
-                                        <rect key="frame" x="15" y="579" width="384" height="242"/>
+                                        <rect key="frame" x="15" y="573.66666666666663" width="384" height="242"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-XP-E2f">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="・これは仮注文になります。仮注文フォームを当社が受信した後、送料等の記載したメールをお送りし、それをもってご注文になります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-XP-E2f">
                                                 <rect key="frame" x="22" y="16" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3294117647" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXR-wS-ZZe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="・ご注文は代引き、振込のみです。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXR-wS-ZZe">
                                                 <rect key="frame" x="22" y="71" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3294117647" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-P1-H05">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="・メールサーバーの不調などの理由により、メールが到着しない恐れがあります。２～３日経っても折り返しメールが無い時は催促をお願いいたします。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-P1-H05">
                                                 <rect key="frame" x="22" y="117" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3294117647" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1y-2l-BFl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="・振込の場合は入金確認をもって商品を発送いたします。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1y-2l-BFl">
                                                 <rect key="frame" x="22" y="179" width="42" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.3294117647" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -316,14 +316,14 @@
                                             <constraint firstAttribute="trailing" secondItem="mXR-wS-ZZe" secondAttribute="trailing" constant="10" id="rX0-39-uoJ"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-fk-E0Y">
-                                        <rect key="frame" x="15" y="256" width="87" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6000円以上お買い上げの場合、送料が無料になります。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-fk-E0Y">
+                                        <rect key="frame" x="15" y="256" width="337.66666666666669" height="15.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.3294117647" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お客様情報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-b0-n8I">
-                                        <rect key="frame" x="15" y="292" width="87" height="21"/>
+                                        <rect key="frame" x="15" y="286.66666666666669" width="337.66666666666669" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -366,7 +366,7 @@
                             <constraint firstItem="MnA-VL-OaZ" firstAttribute="width" secondItem="vEn-Aw-MI4" secondAttribute="width" id="ypZ-qt-eOO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="MGj-Pb-vGi"/>
+                    <navigationItem key="navigationItem" title="注文確認" id="MGj-Pb-vGi"/>
                     <connections>
                         <outlet property="address" destination="vGL-WK-5rR" id="l7d-ud-zSc"/>
                         <outlet property="charge" destination="UAf-wW-xQX" id="gVp-6n-iba"/>
@@ -381,7 +381,7 @@
             </objects>
             <point key="canvasLocation" x="2469.53125" y="-1418.5546875"/>
         </scene>
-        <!--Product Detail View Controller-->
+        <!--商品詳細-->
         <scene sceneID="59c-0J-p6q">
             <objects>
                 <viewController storyboardIdentifier="ProductDetailVC" automaticallyAdjustsScrollViewInsets="NO" id="ka7-Pe-x7c" customClass="ProductDetailViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -516,7 +516,7 @@
                             <constraint firstItem="Zmo-OJ-5t1" firstAttribute="width" secondItem="3qP-6e-RmM" secondAttribute="width" id="lGC-wn-5Px"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FTZ-uA-j8i">
+                    <navigationItem key="navigationItem" title="商品詳細" id="FTZ-uA-j8i">
                         <barButtonItem key="rightBarButtonItem" image="Shopping Cart Filled" id="jiQ-Dk-Clx">
                             <color key="tintColor" red="0.8980392157" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

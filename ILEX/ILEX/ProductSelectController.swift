@@ -26,7 +26,7 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         
         if !UserData.didLoginAtFirstTime {
             UserData.didLoginAtFirstTime = true
-            self.showFirstAlert(title: "アプリをインストールしていただきありがとうございます。当社はお客様のパートナーに最適な商品を提供しています。是非お試しください。\nまず最初に利用規約をご一読ください。", message: nil, defaultHandler: { _ in
+            self.showFirstAlert(title: "アプリをインストールしていただきありがとうございます。\n本サービスをご利用する前に、利用規約をご一読ください。", message: nil, defaultHandler: { _ in
                 let storyboard = UIStoryboard(name: "Setting", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "RuleWebViewController")
                 self.navigationController?.pushViewController(vc, animated: true)

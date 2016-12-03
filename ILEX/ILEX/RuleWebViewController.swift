@@ -11,7 +11,7 @@ import UIKit
 class RuleWebViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
-    var targetURL = "http://app.ilex.ac/ILEX/rule/index.html"
+    var targetURL = "http://itlife009.com/ILEX/rule/index.html"
     
     
     override func viewDidLoad() {

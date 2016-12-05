@@ -53,6 +53,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.tag = (indexPath as NSIndexPath).row
         cell.cartTitle.text = self.cartList[indexPath.row].title
         cell.cartCount.text = "数量:\(self.cartList[indexPath.row].count)個"

@@ -17,7 +17,7 @@ class TextFieldWithDoneButton: UITextField {
         self.numberToolbar?.barStyle = UIBarStyle.default
         self.numberToolbar?.items = [
             UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(TextFieldWithDoneButton.doneAction))
+            UIBarButtonItem(title: "閉じる", style: UIBarButtonItemStyle.plain, target: self, action: #selector(TextFieldWithDoneButton.doneAction))
         ]
         self.numberToolbar?.sizeToFit()
         self.inputAccessoryView = self.numberToolbar

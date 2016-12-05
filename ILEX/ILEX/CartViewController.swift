@@ -80,7 +80,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func didTapButton(_ sender: Any) {
         if UserData.email == nil || UserData.address == nil {
-            self.showAlert(nil, message: "「メールアドレス」と「お届け先」が登録されていることを確認してください。設定画面に移動しますか？", defaultHandler: { _ in
+            self.showAlert(nil, message: "「メールアドレス」と「配送先」が登録されていることを確認してください。設定画面に移動しますか？", defaultHandler: { _ in
                 self.performSegue(withIdentifier: "toSetting", sender: nil)
             })
             

@@ -43,9 +43,10 @@ class OrderListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let label1 = cell.viewWithTag(1) as! UILabel
-        label1.text = self.shppingList[indexPath.row].date
+        label1.text = "購入日:" + self.shppingList[indexPath.row].date
         let label2 = cell.viewWithTag(2) as! UILabel
-        label2.text = "\(self.shppingList[indexPath.row].totalValue)"
+        let price = NSNumber(value: self.shppingList[indexPath.row].totalValue).priceString()
+        label2.text = "小計:\(price)(税込)"
         
         return cell
     }
@@ -53,11 +54,11 @@ class OrderListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedList = self.shppingList[indexPath.row]
         performSegue(withIdentifier: "toOrderListDetailVC", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

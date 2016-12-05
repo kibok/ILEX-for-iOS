@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--メニュー-->
+        <!--設定-->
         <scene sceneID="oTg-1q-C6X">
             <objects>
                 <tableViewController storyboardIdentifier="SettingTableVC" id="Tp7-Nh-Ogp" customClass="SettingTableViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                             <tableViewSection headerTitle="注文履歴" id="KRG-0p-zOz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0CS-j7-Zx4">
-                                        <rect key="frame" x="0.0" y="135" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="136" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0CS-j7-Zx4" id="hQc-h3-FDQ">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
@@ -76,7 +76,7 @@
                             <tableViewSection headerTitle="メール設定" id="Rna-UY-U0x">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nbc-l3-49S">
-                                        <rect key="frame" x="0.0" y="235" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="237" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nbc-l3-49S" id="GwR-IH-b7S">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
@@ -101,10 +101,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="送信先の登録" id="xHa-fO-Mxl">
+                            <tableViewSection headerTitle="配送先の設定" id="xHa-fO-Mxl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RSq-yL-aUp">
-                                        <rect key="frame" x="0.0" y="335" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="338" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RSq-yL-aUp" id="Elc-KW-PT8">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
@@ -132,7 +132,7 @@
                             <tableViewSection headerTitle="その他" id="H5c-nz-azp">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1MO-iB-CF2">
-                                        <rect key="frame" x="0.0" y="435" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="439" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1MO-iB-CF2" id="n6m-Lz-imJ">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
@@ -156,7 +156,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jLb-RZ-LXe">
-                                        <rect key="frame" x="0.0" y="479" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="483" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jLb-RZ-LXe" id="Ept-3r-X8X">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.5"/>
@@ -184,7 +184,7 @@
                             <tableViewSection headerTitle="バージョン" id="vx0-XT-eKl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XYf-Oa-JSf">
-                                        <rect key="frame" x="0.0" y="579" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="584" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XYf-Oa-JSf" id="hiS-ei-Fth">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -220,7 +220,7 @@
                             <outlet property="delegate" destination="Tp7-Nh-Ogp" id="gd8-I6-dul"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="メニュー" id="9w5-Mx-8fh">
+                    <navigationItem key="navigationItem" title="設定" id="9w5-Mx-8fh">
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="dpF-Jc-UWO">
                             <color key="tintColor" red="0.8980392157" green="0.0" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="398" y="-969"/>
         </scene>
-        <!--User Info View Controller-->
+        <!--お客様情報-->
         <scene sceneID="6yW-Tv-a6o">
             <objects>
                 <tableViewController id="hqA-PM-4Ib" customClass="UserInfoViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -409,6 +409,7 @@
                             <outlet property="delegate" destination="hqA-PM-4Ib" id="d4r-Ay-5Hx"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="お客様情報" id="0Bz-w9-43Z"/>
                     <connections>
                         <outlet property="address" destination="uUH-1Z-1lz" id="LNG-yy-rVr"/>
                         <outlet property="email" destination="WWo-Ig-MjT" id="mhZ-nW-6jV"/>
@@ -422,7 +423,7 @@
             </objects>
             <point key="canvasLocation" x="1348" y="-1643"/>
         </scene>
-        <!--Confirm User Mail View Controller-->
+        <!--メール設定-->
         <scene sceneID="W9g-Ym-sMD">
             <objects>
                 <viewController storyboardIdentifier="EMailVC" id="I7u-OG-Iu7" customClass="ConfirmUserMailViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -473,7 +474,7 @@
                             <constraint firstItem="19x-lR-g0h" firstAttribute="top" secondItem="dng-aC-YzG" secondAttribute="bottom" constant="30" id="up9-cD-dy3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sSr-zm-mIe"/>
+                    <navigationItem key="navigationItem" title="メール設定" id="sSr-zm-mIe"/>
                     <connections>
                         <outlet property="userMailTextField" destination="Ru2-Yv-6G1" id="FeF-3q-b4c"/>
                         <segue destination="ehP-yo-Okg" kind="show" identifier="toCheckPasswordVC" id="r8g-s8-ftG"/>
@@ -483,7 +484,7 @@
             </objects>
             <point key="canvasLocation" x="1348" y="-969"/>
         </scene>
-        <!--Check Password View Controller-->
+        <!--認証-->
         <scene sceneID="nUk-Ov-zkh">
             <objects>
                 <viewController id="ehP-yo-Okg" customClass="CheckPasswordViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -546,6 +547,7 @@
                             <constraint firstItem="Tpm-aO-eXp" firstAttribute="top" secondItem="wrV-fC-sjW" secondAttribute="bottom" constant="30" id="uDc-q5-op4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="認証" id="UG3-e2-old"/>
                     <connections>
                         <outlet property="textField" destination="wrV-fC-sjW" id="5oM-W4-of1"/>
                     </connections>
@@ -554,7 +556,7 @@
             </objects>
             <point key="canvasLocation" x="2183" y="-969"/>
         </scene>
-        <!--Order List View Controller-->
+        <!--注文履歴-->
         <scene sceneID="gqp-Ye-5Tc">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="8ar-a1-uGn" customClass="OrderListViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -615,6 +617,7 @@
                             <constraint firstItem="19S-mP-3Wd" firstAttribute="top" secondItem="oew-Dm-KWD" secondAttribute="bottom" id="w1N-Cz-jpV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="注文履歴" id="nNJ-mq-N20"/>
                     <connections>
                         <segue destination="XEc-EH-Bl2" kind="show" identifier="toOrderListDetailVC" id="Ral-UG-Vvq"/>
                     </connections>
@@ -623,7 +626,7 @@
             </objects>
             <point key="canvasLocation" x="367" y="-201"/>
         </scene>
-        <!--Order List Detail View Controller-->
+        <!--詳細-->
         <scene sceneID="40E-9U-iFx">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="XEc-EH-Bl2" customClass="OrderListDetailViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -639,7 +642,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="92" id="Kkk-VW-KTD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell2" rowHeight="92" id="Kkk-VW-KTD">
                                         <rect key="frame" x="0.0" y="28" width="414" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kkk-VW-KTD" id="kyX-pZ-Z4d">
@@ -702,6 +705,7 @@
                             <constraint firstItem="aJQ-es-ttt" firstAttribute="top" secondItem="9LE-PK-jAJ" secondAttribute="bottom" id="xOq-OV-fy8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="詳細" id="LPx-3E-st9"/>
                     <connections>
                         <outlet property="tableView" destination="aJQ-es-ttt" id="J0m-A9-nD8"/>
                     </connections>
@@ -710,7 +714,7 @@
             </objects>
             <point key="canvasLocation" x="366.66666666666669" y="565.76086956521749"/>
         </scene>
-        <!--License Web View Controller-->
+        <!--ライセンス情報-->
         <scene sceneID="doc-33-yqx">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="OPr-Sv-M78" customClass="LicenseWebViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -735,6 +739,7 @@
                             <constraint firstItem="1L0-m4-QJS" firstAttribute="top" secondItem="VCx-lq-4UZ" secondAttribute="bottom" id="PSt-xJ-lNk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="ライセンス情報" id="Qgi-b5-H2r"/>
                     <connections>
                         <outlet property="webView" destination="VCx-lq-4UZ" id="yy4-GW-54n"/>
                     </connections>
@@ -743,7 +748,7 @@
             </objects>
             <point key="canvasLocation" x="1335" y="476"/>
         </scene>
-        <!--Title-->
+        <!--配送先の設定-->
         <scene sceneID="7aj-ba-Xdu">
             <objects>
                 <tableViewController storyboardIdentifier="AddressVC" id="G3X-r6-H2P" customClass="SetUserInfoTableViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -1131,7 +1136,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="mCs-rg-532"/>
+                    <navigationItem key="navigationItem" title="配送先の設定" id="mCs-rg-532"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="address" destination="qcX-y2-QVw" id="3Eb-qT-Ukq"/>
@@ -1151,7 +1156,7 @@
             </objects>
             <point key="canvasLocation" x="1348" y="-200"/>
         </scene>
-        <!--Rule Web View Controller-->
+        <!--利用規約-->
         <scene sceneID="V4a-iA-w2x">
             <objects>
                 <viewController storyboardIdentifier="RuleWebViewController" automaticallyAdjustsScrollViewInsets="NO" id="Wv6-Bp-wce" customClass="RuleWebViewController" customModule="ILEX" customModuleProvider="target" sceneMemberID="viewController">
@@ -1176,6 +1181,7 @@
                             <constraint firstItem="JHj-aV-5ug" firstAttribute="top" secondItem="xBB-zT-daz" secondAttribute="bottom" id="MJY-Ku-GeU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="利用規約" id="koK-Pb-w6Q"/>
                     <connections>
                         <outlet property="webView" destination="xBB-zT-daz" id="Laf-a4-S2J"/>
                     </connections>

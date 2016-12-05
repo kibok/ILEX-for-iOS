@@ -479,7 +479,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4FO-W9-5Ye" firstAttribute="centerY" secondItem="daD-4f-j0e" secondAttribute="centerY" id="3aI-dq-Zye"/>
-                                    <constraint firstAttribute="trailing" secondItem="9f7-yO-zwD" secondAttribute="trailing" id="4y1-UR-uEZ"/>
                                     <constraint firstItem="K84-my-sn3" firstAttribute="centerX" secondItem="Zmo-OJ-5t1" secondAttribute="centerX" id="6se-xW-hKD"/>
                                     <constraint firstItem="jZV-xV-Cni" firstAttribute="leading" secondItem="Zmo-OJ-5t1" secondAttribute="leading" constant="15" id="7VN-2K-jk1"/>
                                     <constraint firstAttribute="trailing" secondItem="kWG-W5-cBr" secondAttribute="trailing" constant="15" id="7ZR-DZ-LFY"/>

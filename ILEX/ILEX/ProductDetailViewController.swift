@@ -40,8 +40,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
         self.productValue.text = "\(NSNumber(value: self.list[0].value).priceString())(税込)"
         self.productTitle.text = self.list[0].title
         self.productDescription.text = self.list[0].description
-//        self.pickerTextField.text = self.list[0].size
-        self.pickerTextField.text = "サイズを変更"
+        self.pickerTextField.isHidden = true
         
         pickerView.delegate = self
         self.pickerTextField.inputView = pickerView
@@ -123,6 +122,10 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
         let price = NSNumber(value: self.list[row].value).priceString()
         self.productValue.text = "\(price) (税込)"
         self.itemImage.downloadedFrom(link: self.list[row].image)
+    }
+    
+    @IBAction func changeProductSize() {
+        self.pickerTextField.becomeFirstResponder()
     }
     
     // MARK: - UITextFieldDelegate

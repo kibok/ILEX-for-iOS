@@ -53,13 +53,14 @@ class OrderConfirmationViewController: UIViewController {
     let cartList = NSKeyedUnarchiver.unarchiveObject(with: UserData.cartList) as! [CartProductModel]
     var orderNumber: String?
 
-    @IBOutlet weak var subTotal: UILabel!
-    @IBOutlet weak var charge: UILabel!
-    @IBOutlet weak var total: UILabel!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var tel: UILabel!
-    @IBOutlet weak var mail: UILabel!
+    @IBOutlet weak var mainView: OrderConfirmationView!
+//    @IBOutlet weak var subTotal: UILabel!
+//    @IBOutlet weak var charge: UILabel!
+//    @IBOutlet weak var total: UILabel!
+//    @IBOutlet weak var name: UILabel!
+//    @IBOutlet weak var address: UILabel!
+//    @IBOutlet weak var tel: UILabel!
+//    @IBOutlet weak var mail: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,13 +68,13 @@ class OrderConfirmationViewController: UIViewController {
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
         let charge = totalValue >= 6000 ? 0 : 800
         
-        self.subTotal.text = "\(NSNumber(value: totalValue).priceString())"
-        self.charge.text = "\(NSNumber(value: charge).priceString())"
-        self.total.text = "\(NSNumber(value: totalValue + charge).priceString())"
-        self.name.text = UserData.name == nil ? "未登録" : UserData.name
-        self.address.text = UserData.address == nil ? "未登録" : UserData.address
-        self.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
-        self.mail.text = UserData.email == nil ? "未登録" : UserData.email
+        self.mainView.subTotal.text = "\(NSNumber(value: totalValue).priceString())"
+        self.mainView.charge.text = "\(NSNumber(value: charge).priceString())"
+        self.mainView.total.text = "\(NSNumber(value: totalValue + charge).priceString())"
+        self.mainView.name.text = UserData.name == nil ? "未登録" : UserData.name
+        self.mainView.address.text = UserData.address == nil ? "未登録" : UserData.address
+        self.mainView.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
+        self.mainView.mail.text = UserData.email == nil ? "未登録" : UserData.email
         self.orderNumber = setOrderNumber()
         
         let item = cartList.map {

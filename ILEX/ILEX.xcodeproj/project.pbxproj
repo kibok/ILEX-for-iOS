@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2112754A1DF792B000519929 /* OrderConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211275491DF792B000519929 /* OrderConfirmationView.swift */; };
+		2112754C1DF792BD00519929 /* OrderConfirmationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2112754B1DF792BD00519929 /* OrderConfirmationView.xib */; };
 		211AC0AF1DB3C9A0007A2444 /* ShoppingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211AC0AE1DB3C9A0007A2444 /* ShoppingListModel.swift */; };
 		211AC0B11DB3E329007A2444 /* OrderListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211AC0B01DB3E329007A2444 /* OrderListDetailViewController.swift */; };
 		21297EFA1D990887001AB29C /* CartListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21297EF91D990887001AB29C /* CartListModel.swift */; };
@@ -70,6 +72,8 @@
 		045FA73D9BE815E5D3E2533A /* Pods-ILEX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILEX.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILEX/Pods-ILEX.debug.xcconfig"; sourceTree = "<group>"; };
 		0750B78AA45BDA261FCEE5EE /* Pods_ILEXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E5F75EB85D5102EDDC4CA5 /* Pods_ILEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ILEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		211275491DF792B000519929 /* OrderConfirmationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderConfirmationView.swift; sourceTree = "<group>"; };
+		2112754B1DF792BD00519929 /* OrderConfirmationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationView.xib; sourceTree = "<group>"; };
 		211AC0AE1DB3C9A0007A2444 /* ShoppingListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListModel.swift; sourceTree = "<group>"; };
 		211AC0B01DB3E329007A2444 /* OrderListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListDetailViewController.swift; sourceTree = "<group>"; };
 		21297EF91D990887001AB29C /* CartListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartListModel.swift; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 				21B835AB1D91101C00355207 /* PlusMinusButton.xib */,
 				21419CF61D8BE1B700A282D8 /* ProductTableViewCell.swift */,
 				21419CFE1D8BE53600A282D8 /* ProductTableViewCell.xib */,
+				211275491DF792B000519929 /* OrderConfirmationView.swift */,
+				2112754B1DF792BD00519929 /* OrderConfirmationView.xib */,
 				21970FCE1DBCF51800CB79C4 /* TextFieldWithDoneButton.swift */,
 			);
 			name = ViewParts;
@@ -449,6 +455,7 @@
 			files = (
 				21419CC11D8B805600A282D8 /* LaunchScreen.storyboard in Resources */,
 				21B835AC1D91101C00355207 /* PlusMinusButton.xib in Resources */,
+				2112754C1DF792BD00519929 /* OrderConfirmationView.xib in Resources */,
 				21419CBE1D8B805600A282D8 /* Assets.xcassets in Resources */,
 				21419CFF1D8BE53600A282D8 /* ProductTableViewCell.xib in Resources */,
 				C46FE2BD1D9025DF009B6EF8 /* CartTableViewCell.xib in Resources */,
@@ -545,6 +552,7 @@
 				216E305F1DA5EADC000B5410 /* StringExtension.swift in Sources */,
 				21419CB91D8B805600A282D8 /* ProductSelectController.swift in Sources */,
 				212E1A8D1D911EEB00D98AAB /* XibLoadView.swift in Sources */,
+				2112754A1DF792B000519929 /* OrderConfirmationView.swift in Sources */,
 				21419CB71D8B805600A282D8 /* AppDelegate.swift in Sources */,
 				21297EFA1D990887001AB29C /* CartListModel.swift in Sources */,
 				21419CEF1D8B8F7E00A282D8 /* ProductDetailViewController.swift in Sources */,

@@ -58,7 +58,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.cartCount.text = "数量:\(self.cartList[indexPath.row].count)個"
         cell.cartValue.text = "\(NSNumber(value: self.cartList[indexPath.row].value).priceString())(税込)"
         cell.cartImage.downloadedFrom(link: self.cartList[indexPath.row].image)
-        cell.delegate = self   
+        cell.delegate = self
         return cell
     }
     

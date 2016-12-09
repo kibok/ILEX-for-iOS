@@ -12,14 +12,13 @@ import Alamofire
 class APIManager {
     var viewModel: ProductListModel!
     
-    func getItemList(completionHandler: @escaping (NSArray) -> Void) {
+    func getItemList(completionHandler: @escaping (NSDictionary) -> Void) {
         Alamofire.request("http://itlife009.com/ILEX/item/ilex_part1.json").responseJSON { response in
             if response.result.isSuccess {
                 let json = response.result.value
                 let jsonDic = json as! NSDictionary
-                let item = jsonDic.object(forKey: "Item") as! NSArray
-                print(item)
-                completionHandler(item)
+                
+                completionHandler(jsonDic)
             }
         }
     }    

@@ -62,7 +62,6 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
         
         guard let item = self.viewModel else { return 0 }
         let a = item.products?.filter{ $0.visibleCode == 1 }
-        print(a!.count)
         return a!.count
     }
     
@@ -98,7 +97,8 @@ class ProductSelectViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: - APINetwork
     
     func getItemLsit(){
-        self.apiManager.getItemList(completionHandler: { item in
+        self.apiManager.getItemList(completionHandler: { jsonDic in
+            let item = jsonDic.object(forKey: "Item") as! NSArray
             self.viewModel = ProductListModel(item: item)
             self.list = (self.viewModel?.products?.filter { $0.visibleCode == 1 })!
             self.productTalbeView.reloadData()

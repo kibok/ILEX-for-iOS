@@ -84,6 +84,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UITex
         }
         let cartListNSData = NSKeyedArchiver.archivedData(withRootObject: cartList)
         UserData.cartList = cartListNSData
+        
     }
     
     func checkCarList(cartList: [CartProductModel], cartProductModel: CartProductModel) -> Bool {

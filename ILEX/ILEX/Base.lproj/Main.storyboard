@@ -394,7 +394,7 @@
                                             <constraint firstAttribute="height" constant="1" id="IVa-r0-mWx"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="¥6000円以上お買い上げの場合、送料が無料になります。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2U-bc-KOM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="¥6,000以上お買い上げの場合、送料が無料になります。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2U-bc-KOM">
                                         <rect key="frame" x="15" y="100.33333333333337" width="384" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.34901960784313724" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
@@ -438,6 +438,7 @@
                     <navigationItem key="navigationItem" title="カート" id="QLa-ul-zVN"/>
                     <connections>
                         <outlet property="cartTableView" destination="kjK-ob-e1T" id="DHu-JJ-eVi"/>
+                        <outlet property="cautionLabel" destination="j2U-bc-KOM" id="cuv-5M-tuf"/>
                         <outlet property="footerView" destination="TYs-Ew-EsH" id="iuu-rM-aZJ"/>
                         <outlet property="productCount" destination="lE7-Fy-gfA" id="vcl-H5-qry"/>
                         <outlet property="totalPrice" destination="dMg-bL-SMG" id="QkF-f4-Mcs"/>
@@ -495,7 +496,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ProductSelectController" automaticallyAdjustsScrollViewInsets="NO" id="4zD-PT-NuE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vHh-zw-zDk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vHh-zw-zDk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

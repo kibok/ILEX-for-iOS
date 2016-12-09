@@ -22,7 +22,6 @@ class ConfirmUserMailViewController: UIViewController {
     
     @IBAction func requestConfirmUserMail(_ sender: AnyObject) {
         if !self.checkMailValidation() {
-            //showAlert()
             return
         }
         let parameters: Parameters = ["to":self.userMailTextField.text!, "password":self.setPassword()]

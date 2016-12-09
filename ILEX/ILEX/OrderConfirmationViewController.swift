@@ -58,7 +58,6 @@ class OrderConfirmationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
         let postage = totalValue >= ProductViewModel.postageFree ? 0 : ProductViewModel.postage
         

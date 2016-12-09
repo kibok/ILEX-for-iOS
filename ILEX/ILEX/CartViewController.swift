@@ -19,6 +19,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     let userDefaults = UserDefaults.standard
 
     
+    @IBOutlet weak var cautionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +40,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.productCount.text = "合計\(NSNumber(value: self.cartList.count).priceString())点"
         let price = NSNumber(value: self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }).priceString()
         self.totalPrice.text = "合計金額 \(price)(税込)"
+        
+        let postageFree = NSNumber(value : ProductViewModel.postageFree).priceString()
+        self.cautionLabel.text = postageFree + "以上お買い上げの場合、送料が無料になります。"
     }
     
     // MARK: - Table view data source

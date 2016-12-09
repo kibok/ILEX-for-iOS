@@ -54,23 +54,19 @@ class OrderConfirmationViewController: UIViewController {
     var orderNumber: String?
 
     @IBOutlet weak var mainView: OrderConfirmationView!
-//    @IBOutlet weak var subTotal: UILabel!
-//    @IBOutlet weak var charge: UILabel!
-//    @IBOutlet weak var total: UILabel!
-//    @IBOutlet weak var name: UILabel!
-//    @IBOutlet weak var address: UILabel!
-//    @IBOutlet weak var tel: UILabel!
-//    @IBOutlet weak var mail: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let totalValue = self.cartList.map { $0.value * $0.count }.reduce(0) { $0 + $1 }
-        let charge = totalValue >= 6000 ? 0 : 800
+        let postage = totalValue >= ProductViewModel.postageFree ? 0 : ProductViewModel.postage
+        
+        print(postage)
         
         self.mainView.subTotal.text = "\(NSNumber(value: totalValue).priceString())"
-        self.mainView.charge.text = "\(NSNumber(value: charge).priceString())"
-        self.mainView.total.text = "\(NSNumber(value: totalValue + charge).priceString())"
+        self.mainView.charge.text = "\(NSNumber(value: postage).priceString())"
+        self.mainView.total.text = "\(NSNumber(value: totalValue + postage).priceString())"
         self.mainView.name.text = UserData.name == nil ? "未登録" : UserData.name
         self.mainView.address.text = UserData.address == nil ? "未登録" : UserData.address
         self.mainView.tel.text = UserData.tel == nil ? "未登録" : UserData.tel
@@ -99,7 +95,7 @@ class OrderConfirmationViewController: UIViewController {
             "item_info": [
                 "OrderNumber": self.orderNumber!,
                 "SumValue": totalValue,
-                "Postage": charge,
+                "Postage": postage,
                 "OrderItem": item
             ]
         ]

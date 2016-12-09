@@ -52,19 +52,33 @@ struct ProductListModel {
 class ProductViewModel {
     
     private static var productCache: [Product?] = []
+    private static var postageCashe: Int = 0
+    private static var PostageFreeCashe: Int = 0
     
     class func loadProducts() {
         let apiManager = APIManager()
-        apiManager.getItemList(completionHandler: { item in
-            let a = ProductListModel(item: item)
-            self.productCache = a.products!
+        apiManager.getItemList(completionHandler: { jsonDic in
+            
+            let item = jsonDic.object(forKey: "Item") as! NSArray
+            self.productCache = ProductListModel(item: item).products!
+            self.postageCashe = jsonDic.object(forKey: "Postage") as! Int
+            self.PostageFreeCashe = jsonDic.object(forKey: "PostageFree") as! Int
         })
     }
     
     class var products: [Product?] {
         return self.productCache
     }
+
+    class var postage: Int {
+        return self.postageCashe
+    }
+    
+    class var postageFree: Int {
+        return self.PostageFreeCashe
+    }
 }
+
 
 
 

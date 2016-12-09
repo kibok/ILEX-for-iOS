@@ -22,6 +22,7 @@ class ConfirmUserMailViewController: UIViewController {
     
     @IBAction func requestConfirmUserMail(_ sender: AnyObject) {
         if !self.checkMailValidation() {
+            self.showAlert("保存失敗", message: "メールアドレスが正しくありません")
             return
         }
         let parameters: Parameters = ["to":self.userMailTextField.text!, "password":self.setPassword()]

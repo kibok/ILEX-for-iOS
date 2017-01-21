@@ -408,7 +408,9 @@
 				TargetAttributes = {
 					21419CB21D8B805600A282D8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 44KGDN954X;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -722,11 +724,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ILEX/ILEX.entitlements;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 44KGDN954X;
 				INFOPLIST_FILE = ILEX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ilex-inc.ILEX";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilex.ILEX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4c0246c5-b0a2-46b0-9d88-fe97ccbc76ae";
+				PROVISIONING_PROFILE_SPECIFIER = ILEX;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -742,11 +747,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ILEX/ILEX.entitlements;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 44KGDN954X;
 				INFOPLIST_FILE = ILEX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ilex-inc.ILEX";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ilex.ILEX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4c0246c5-b0a2-46b0-9d88-fe97ccbc76ae";
+				PROVISIONING_PROFILE_SPECIFIER = ILEX;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;

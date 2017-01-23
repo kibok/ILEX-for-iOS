@@ -14,7 +14,6 @@ protocol CartTableViewCellDelegate: class {
 
 class CartTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cartImage: UIImageView!
     @IBOutlet weak var cartCount: UILabel!
     @IBOutlet weak var cartValue: UILabel!
